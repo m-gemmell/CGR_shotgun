@@ -1,0 +1,255 @@
+# (APPENDIX) Appendix {-}
+
+# Mamba installs
+<center>
+![](figures/mamba_logo.png){style="width:200px; border-radius:5px"}
+</center>
+
+## Mamba installation and environment {#mamba_install}
+
+Mamba is a reimplementation of conda. It is a great tool for installing bioinformatic packages including R packages.
+
+Mamba github: <https://github.com/mamba-org/mamba>
+
+The best way to use Mamba is to install Miniforge. It has both Conda and Mamba commands.
+
+Miniforge installation: <https://github.com/conda-forge/miniforge>
+
+Mamba guide: <https://mamba.readthedocs.io/en/latest/user_guide/mamba.html>
+
+To create the mamba environment `shotgun_meta` run the below commands in your bash. You will need to have installed `mamba` first.
+
+```{bash, eval=FALSE}
+#shotgun_meta
+mamba create -n shotgun_meta
+mamba activate shotgun_meta
+#Install packages
+mamba install -c bioconda fastqc trim-galore multiqc bowtie2 kraken2 \
+krona bracken lefse flash megahit quast metabat2 prokka bbmap bakta circos
+#Update krona taxonomy database
+ktUpdateTaxonomy.sh
+#Install GenoVi via pip
+pip install genovi
+```
+
+You will need to install the `Bakta` database as well. This requires you have a directory to store the database. In the below example you will need a directory with the path `~/databases/bakta_db`, of course feel free to use a different location you have.
+
+```{bash, eval=FALSE}
+bakta_db download --output ~/databases/bakta --type full
+```
+
+Install [MinPath](https://github.com/mgtools/MinPath) via `git`.
+I suggest creating a directory called "git_installs" in your home directory and running this code there.
+
+```{bash, eval=FALSE}
+#git_installs directory
+mkdir ~/git_installs
+cd ~/git_installs
+#MinPath
+git clone https://github.com/mgtools/MinPath
+```
+
+To run `MinPath` in your own machines you will need to use the full path of the python file.
+If you installed these in your "~/git_installs" examples are below.
+
+```{bash, eval=FALSE}
+#MinPath help page
+python ~/git_installs/Minpath/MinPath.py -h
+```
+
+To create the mamba environment `cocopye` run the below commands in your bash. You will need to have installed `mamba` first.
+
+```{bash, eval=FALSE}
+#checkm
+mamba create -n cocopye
+mamba activate checkm2
+mamba install bioconda::checkm2=1.1.0
+#Download required databases
+checkm2 database --download
+```
+
+To create the mamba environment `biobakery3.9` run the below commands in your bash. You will need to have installed `mamba` first.
+
+```{bash, eval=FALSE}
+#biobakery3
+mamba create -n biobakery3.9
+mamba activate biobakery3.9
+#Add required channels
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --add channels biobakery
+#Install huamnn3.9
+mamba install -c biobakery humann=3.9
+#Install hclust2 and matplotlib
+mamba install bioncda::hclust2=1.0.0 conda-forge::matplotlib=3.7.3
+```
+
+Next you will need to install the `HUMAnN` and `MetaPhlAn` databases.
+
+```{bash, eval=FALSE}
+#Ensure you have biobakery3 mamba environment activated
+#Update HUMAnN databases
+humann_databases --download chocophlan full /path/to/databases --update-config yes
+humann_databases --download uniref uniref90_diamond /path/to/databases --update-config yes
+humann_databases --download utility_mapping full /path/to/databases --update-config yes
+#Install MetaPhlAn databases
+metaphlan --install --index mpa_vOct22_CHOCOPhlAnSGB_202403
+```
+
+Installing the `MetaPhlAn` databases may not work with the command above. If not follow the below instructions.
+
+- Go to the following link: http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/
+- Download the following files (or the most recent vOct22 files):
+  - [__mpa_vOct22_CHOCOPhlAnSGB_202403.md5__](http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202403.md5)
+  - [__mpa_vOct22_CHOCOPhlAnSGB_202403.tar__](http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/mpa_vOct22_CHOCOPhlAnSGB_202403.tar)
+  - [__bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.md5__](http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.md5)
+  - [__bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar__](http://cmprod1.cibio.unitn.it/biobakery4/metaphlan_databases/bowtie2_indexes/mpa_vOct22_CHOCOPhlAnSGB_202403_bt2.tar)
+- Put these in the `MetaPhlAn` databases directory. This will be in your mamba environment directory.
+  - E.g.: ~/mambaforge/envs/biobakery3.9/lib/python3.7/site-packages/metaphlan/metaphlan_databases
+  - Note: this may not be your exact path.
+- Run `metaphlan --install --index mpa_vOct22_CHOCOPhlAnSGB_202403` again.
+- Untar the CHOCOPhlan tar file
+  - Change directory to your `MetaPhlAn` database directory.
+  - `tar -xvf mpa_vOct22_CHOCOPhlAnSGB_202403.tar`
+
+Once the databses are all setup you can test `HUMAnN`.
+
+```{bash, eval = FALSE}
+humann_test
+```
+
+
+# Next steps
+<center>
+![](figures/step.png){style="width:200px"}
+</center>
+
+Below are some good links to start with before carrying out your own projects.
+
+- `KrakenTools`: A suite of scripts to be used alongside the Kraken, KrakenUniq, Kraken 2, or Bracken programs. 
+  - https://github.com/jenniferlu717/KrakenTools
+- A review of computational tools for generating metagenome-assembled genomes from metagenomic sequencing data
+  - https://www.sciencedirect.com/science/article/pii/S2001037021004931
+- A review paper on metagenome assembly approaches
+   - Genome-resolved metagenomics using environmental and clinical samples: https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bbab030/6184411
+- bioBakery tools for meta'omic profiling
+   - https://github.com/biobakery/biobakery
+- Assessing the performance of different approaches for functional and taxonomic annotation of metagenomes
+   - https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6289-6
+- MicrobeAnnotator: Easy-to-use pipeline for the comprehensive metabolic annotation of microbial genomes.
+   - https://github.com/cruizperez/MicrobeAnnotator
+- MetaEuk: Functional annotation of eukaryotic metagenome
+   - https://github.com/soedinglab/metaeuk
+_ Methods for Metagenomic data visualisation and analysis
+   - https://www.researchgate.net/publication/318252633_Methods_for_The_Metagenomic_Data_Visualization_and_Analysis
+- Visualizing metagenomic and metatranscriptomic data: A comprehensive review
+  - https://www.sciencedirect.com/science/article/pii/S2001037024001430
+
+# Manuals
+<center>
+![](figures/manual.png){style="width:150px"}
+</center>
+
+Conda: https://conda.io/projects/conda/en/latest/user-guide/getting-started.html
+
+FastQC: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+
+MultiQC: https://multiqc.info/
+
+Trim Galore: https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/
+
+Bowtie2: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml
+
+samtools: http://www.htslib.org/
+
+BBTools: https://jgi.doe.gov/data-and-tools/bbtools/
+
+Kraken2: https://github.com/DerrickWood/kraken2/wiki/Manual
+
+Krona: https://github.com/marbl/Krona/wiki/KronaTools
+
+Bracken: https://ccb.jhu.edu/software/bracken/index.shtml?t=manual
+
+LEfSe: https://huttenhower.sph.harvard.edu/lefse/
+
+HUMAnN 3.0: https://huttenhower.sph.harvard.edu/humann/
+
+MetaPhlAn 4.0: https://github.com/biobakery/MetaPhlAn/wiki/MetaPhlAn-4
+
+Biobakery: https://github.com/biobakery/biobakery
+
+hclust2: https://github.com/SegataLab/hclust2
+
+MegaHit: https://github.com/voutcn/megahit
+
+BWA: https://github.com/lh3/bwa
+
+minimap2: https://github.com/lh3/minimap2
+
+MetaBAT2: https://bitbucket.org/berkeleylab/metabat/src/master/
+
+CoCoPyE: https://github.com/gobics/cocopye
+
+PhyloPhlAn: https://github.com/biobakery/phylophlan/wiki
+
+Prokka: https://github.com/tseemann/prokka
+
+MinPath: https://github.com/mgtools/MinPath/blob/master/readme
+
+MetaCyc: https://metacyc.org/
+
+# Obtaining Read Data
+
+The following commands can be used to obtain the sequence data used in this practical, directly from the EBI metagenomics site. It is worth noting that these are the full set of data, not like the miniaturised version you have used in the tutorial.
+
+```{bash eval=FALSE}
+wget -O K1_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505102/ERR505102_1.fastq.gz
+wget -O K1_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505102/ERR505102_2.fastq.gz
+wget -O K2_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505104/ERR505104_1.fastq.gz
+wget -O K2_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505104/ERR505104_2.fastq.gz
+wget -O K3_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505095/ERR505095_1.fastq.gz
+wget -O K3_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505095/ERR505095_2.fastq.gz
+wget -O K4_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505096/ERR505096_1.fastq.gz
+wget -O K4_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505096/ERR505096_2.fastq.gz
+wget -O K5_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505097/ERR505097_1.fastq.gz
+wget -O K5_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505097/ERR505097_2.fastq.gz
+wget -O K6_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505098/ERR505098_1.fastq.gz
+wget -O K6_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505098/ERR505098_2.fastq.gz
+wget -O K7_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505099/ERR505099_1.fastq.gz
+wget -O K7_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505099/ERR505099_2.fastq.gz
+wget -O K8_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505100/ERR505100_1.fastq.gz
+wget -O K8_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505100/ERR505100_2.fastq.gz
+wget -O K9_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505101/ERR505101_1.fastq.gz
+wget -O K9_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505101/ERR505101_2.fastq.gz
+wget -O K10_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505103/ERR505103_1.fastq.gz
+wget -O K10_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505103/ERR505103_2.fastq.gz
+wget -O K11_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505105/ERR505105_1.fastq.gz
+wget -O K11_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505105/ERR505105_2.fastq.gz
+wget -O K12_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505106/ERR505106_1.fastq.gz
+wget -O K12_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505106/ERR505106_2.fastq.gz
+wget -O W1_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505090/ERR505090_1.fastq.gz
+wget -O W1_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505090/ERR505090_2.fastq.gz
+wget -O W2_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505088/ERR505088_1.fastq.gz
+wget -O W2_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505088/ERR505088_2.fastq.gz
+wget -O W3_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505084/ERR505084_1.fastq.gz
+wget -O W3_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505084/ERR505084_2.fastq.gz
+wget -O W4_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505085/ERR505085_1.fastq.gz
+wget -O W4_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505085/ERR505085_2.fastq.gz
+wget -O W5_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505086/ERR505086_1.fastq.gz
+wget -O W5_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505086/ERR505086_2.fastq.gz
+wget -O W6_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505087/ERR505087_1.fastq.gz
+wget -O W6_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505087/ERR505087_2.fastq.gz
+wget -O W7_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505089/ERR505089_1.fastq.gz
+wget -O W7_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505089/ERR505089_2.fastq.gz
+wget -O W8_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505091/ERR505091_1.fastq.gz
+wget -O W8_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505091/ERR505091_2.fastq.gz
+wget -O W9_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505092/ERR505092_1.fastq.gz
+wget -O W9_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505092/ERR505092_2.fastq.gz
+wget -O W10_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505093/ERR505093_1.fastq.gz
+wget -O W10_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505093/ERR505093_2.fastq.gz
+wget -O W11_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505094/ERR505094_1.fastq.gz
+wget -O W11_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505094/ERR505094_2.fastq.gz
+wget -O W12_R1.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505083/ERR505083_1.fastq.gz
+wget -O W12_R2.fastq.gz ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR505/ERR505083/ERR505083_2.fastq.gz
+```

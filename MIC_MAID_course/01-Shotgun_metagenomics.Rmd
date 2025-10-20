@@ -1,0 +1,104 @@
+---
+title: "Shotgun Metagenomics"
+author: "Sam Haldenby and Matthew R. Gemmell"
+date: "`r format(Sys.time(), '%B, %Y')`"
+favicon: figures/CGR_favicon.png
+description: CGR book for the Microbial shotgun metagenomics workshop
+cover-image: "figures/CGR_large.png"
+---
+
+```{r cite-packages, include = FALSE}
+# automatically create a bib database for R packages
+# add any packages you want to cite here
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'webexercises'
+), 'packages.bib')
+```
+
+```{r, echo=FALSE}
+#Change colour, border, and text of code chunks
+#Check style.css for .Rchunk
+#https://stackoverflow.com/questions/65627531/change-r-chunk-background-color-in-bookdown-gitbook
+#https://bookdown.org/yihui/rmarkdown-cookbook/chunk-styling.html
+knitr::opts_chunk$set(class.source="Rchunk")
+```
+
+<center>
+![](figures/CGR_large.png){style="width:400px; border-radius:5px; border: 5px white solid"}
+</center>
+<center>
+![](figures/mic.jpeg){style="width:400px; border-radius:5px"}
+</center>
+
+# Introduction
+
+<center>
+![](figures/squid.png){style="width:200px; background: white; border-radius:5px"}
+</center>
+
+There are many unknown and unculturable microbes found in a vast array of different environments. Shotgun metagenomics is an approach to capture all the genetic information in a sample, providing the taxonomic and metabolic information of all present organisms. In this course we will analyse shotgun metagenomic sequencing data from stool samples to compare Western and Korean diets.
+
+Sessions will start with a brief presentation followed by self-paced computer practicals guided by this online interactive book. This book will contain theory and practice code. Multiple choice questions will guide the interpretation of results.
+
+At the end of the course learners will be able to:
+
+-   Carry out quality control of sequencing data, including host removal.
+-   Explain how Kraken2 utilises k-mers to taxonomically classify sequence data.
+-   Quantify taxonomic composition of shotgun metagenomic data with Kraken2 & Bracken.
+-   View taxonomic abundances with Krona.
+-   Utilise LEfSe for biomarker detection.
+-   Profile the microbial pathways in metagenomic sequencing data with the bioBakery suite of tools, including HUMAnN.
+-   Perform a metagenome assembly with MEGAHIT, and assess it with QUAST.
+-   Carry out genomic binning of the metagenome assembly with MetaBAT2 to try to separate the different species present.
+-   Functional annotation of the bins with Bakta.
+
+## Table of contents {.unnumbered}
+
+```{r, echo=FALSE, align="centre"}
+#Create 2 column dataframe
+column_1 <- c(
+  #1 Overview
+  '[**Overview**](#overview)', 
+ '[![](figures/overview.png){style="height:150px"}](#overview)',
+ #3 Trimming data
+    '[**Trimming data**](#qualcont)', 
+ '[![](figures/quality_trimming_and_filtering.png){height="150px"}](#qualcont)',
+ #5 Taxonomic profiling
+   '[**Taxonomic profiling**](#taxprofile)', 
+ '[![](figures/classification.png){height="150px"}](#taxprofile)',
+ #7 Metagenome assembly
+   '[**Metagenome assembly**](#metagenomeassembly)', 
+ '[![](figures/jigsaw.png){style="height:150px; border-radius:15px; background:white"}](#metagenomeassembly)',
+  #9 Functional annotation
+   '[**Functional annotation**](#funcanno)', 
+ '[![](figures/pathways.png){style="height:150px"}](#funcanno)'
+)
+column_2 <- c(
+  #2 Raw data
+  '[**Raw data**](#rawdata)', 
+ '[![](figures/usb_stick.png){style="height:150px"}](#rawdata)',
+ #4 Host removal
+   '[**Host removal**](#hostremoval)', 
+ '[![](figures/bowtie2.png){height="150"}](#hostremoval)',
+ #6 Functional profiling
+   '[**Functional profiling**](#functprofile)', 
+ '[![](figures/profile.png){height="150"}](#functprofile)',
+ #8 Binning
+   '[**Binning**](#binning)', 
+ '[![](figures/yarn_binning.png){style="height:150px; border-radius:15px"}](#binning)',
+   #10 Appendix
+   '[**Appendix**](#mamba-installs)', 
+ '[![](figures/mamba_logo.png){style="height:150px; border-radius:15px"}](#mamba-installs)'
+)
+table_df <- data.frame(column_1, column_2)
+#Kable and kableextra libraries
+library(knitr)
+library(kableExtra)
+#Create table
+#ALign both column in centre (align = "cc")
+table_df %>%
+  kbl(align= "cc", col.names = NULL) %>%
+  kable_styling(position = "center")
+```
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" alt="Creative Commons Licence" style="border-width:0"/></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
