@@ -355,7 +355,8 @@ This can be used on assemblies produced from single cell, single isolate, or met
 <div id="workflow-concept" class="section level2 hasAnchor" number="23.1">
 <h2><span class="header-section-number">23.1</span> Workflow concept<a href="23-Bin_quality.html#workflow-concept" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The tool utilises protein domain families from the Pfam database.
-A protein domain is a region of a protein that folds independently from the rest and they vary in length from ~50-250 amino acids.
+A protein domain is a region of a protein that folds independently from the rest of the protein.
+They vary in length from ~50-250 amino acids.
 Many proteins consist of several domains and a domain can appear in many different proteins.</p>
 <p><code>CoCoPyE</code> estimates quality of a genome by estimating completeness and contamination through an input-preprocessing step followed by a two stage prediction step.</p>
 <p>Below is the workflow as a diagram followed by some quick information on how it works.
@@ -370,7 +371,9 @@ For full details please see the CoCoPyE publication: <a href="https://academic.o
 </center>
 <p>A protein domain search is carried out on all translated open reading frames of our our query genomes, MAGs/bins in our case.
 The Pfam protein database is used and the tool produces protein domain counts for our query genomes.</p>
-<p>Query genomes (MAGS/bins) with a completeness score &lt;10% are rejected and removed from further analysis.</p>
+<p>The completeness of the query genome is estimated based on one of 2 universal marker sets.
+The universal marker sets contain the protein domains found in either all reference bacterial genomes or all reference archaeal genomes.
+Query genomes (MAGS/bins) with a completeness score &lt;10% are rejected and removed from further analysis.</p>
 </div>
 <div id="stage-i" class="section level3 hasAnchor" number="23.1.2">
 <h3><span class="header-section-number">23.1.2</span> Stage I<a href="23-Bin_quality.html#stage-i" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -664,40 +667,40 @@ These are bins which failed the Input Pre-procesing step.</p>
 <span id="cb93-3"><a href="23-Bin_quality.html#cb93-3" tabindex="-1"></a><span class="fu">cut</span> <span class="at">-d</span> <span class="st">&quot;,&quot;</span> <span class="at">-f</span> 1,8 cocopye_quality.csv <span class="kw">|</span> <span class="fu">tr</span> <span class="st">&quot;,&quot;</span> <span class="st">&quot;\t&quot;</span></span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li>What lineage was assigned to bin <strong>K1.1</strong>?
-<div id="radio_GWHMCILBNK" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_GWHMCILBNK" value=""></input> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GWHMCILBNK" value="answer"></input> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GWHMCILBNK" value=""></input> <span><strong>Lachnospiraceae</strong></span></label>
+<div id="radio_WILKMZNQIM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WILKMZNQIM" value=""></input> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WILKMZNQIM" value="answer"></input> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WILKMZNQIM" value=""></input> <span><strong>Lachnospiraceae</strong></span></label>
 </div></li>
 <li>What lineage was assigned to bin <strong>K1.22</strong>?
-<div id="radio_RJSVAVRNHB" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RJSVAVRNHB" value=""></input> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RJSVAVRNHB" value=""></input> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RJSVAVRNHB" value="answer"></input> <span><strong>Lachnospiraceae</strong></span></label>
+<div id="radio_ZUSPKRGKKO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZUSPKRGKKO" value=""></input> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZUSPKRGKKO" value=""></input> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZUSPKRGKKO" value="answer"></input> <span><strong>Lachnospiraceae</strong></span></label>
 </div></li>
 <li>What lineage was assigned to bin <strong>K1.8</strong>?
-<div id="radio_KODJPERMZH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KODJPERMZH" value="answer"></input> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KODJPERMZH" value=""></input> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KODJPERMZH" value=""></input> <span><strong>Lachnospiraceae</strong></span></label>
+<div id="radio_PTBEMSVZVK" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PTBEMSVZVK" value="answer"></input> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PTBEMSVZVK" value=""></input> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PTBEMSVZVK" value=""></input> <span><strong>Lachnospiraceae</strong></span></label>
 </div></li>
 <li>What is the quality value of <strong>K1.1</strong>?
-<div id="radio_YZVFPGYKGH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YZVFPGYKGH" value=""></input> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YZVFPGYKGH" value="answer"></input> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YZVFPGYKGH" value=""></input> <span><strong>0.9769</strong></span></label>
+<div id="radio_FNAWGJDHVY" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FNAWGJDHVY" value=""></input> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FNAWGJDHVY" value="answer"></input> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FNAWGJDHVY" value=""></input> <span><strong>0.9769</strong></span></label>
 </div></li>
 <li>What is the completeness value of <strong>K1.30</strong>?
-<div id="radio_TBTQLPPZOO" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TBTQLPPZOO" value=""></input> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TBTQLPPZOO" value=""></input> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TBTQLPPZOO" value="answer"></input> <span><strong>0.9769</strong></span></label>
+<div id="radio_PFBYHIYOYG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PFBYHIYOYG" value=""></input> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PFBYHIYOYG" value=""></input> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PFBYHIYOYG" value="answer"></input> <span><strong>0.9769</strong></span></label>
 </div></li>
 <li>What is the contamination value of <strong>K1.12</strong> bin?
-<div id="radio_EUMLFKXYFA" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_EUMLFKXYFA" value="answer"></input> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_EUMLFKXYFA" value=""></input> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_EUMLFKXYFA" value=""></input> <span><strong>0.9769</strong></span></label>
+<div id="radio_LWKRCULGTR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_LWKRCULGTR" value="answer"></input> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LWKRCULGTR" value=""></input> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LWKRCULGTR" value=""></input> <span><strong>0.9769</strong></span></label>
 </div></li>
 <li>Which bin has the highest quality value (98.38%)?
-<div id="radio_CWFPTFSPDH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_CWFPTFSPDH" value=""></input> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_CWFPTFSPDH" value=""></input> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_CWFPTFSPDH" value="answer"></input> <span><strong>K1.22</strong></span></label>
+<div id="radio_JWFXLIERGU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_JWFXLIERGU" value=""></input> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JWFXLIERGU" value=""></input> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JWFXLIERGU" value="answer"></input> <span><strong>K1.22</strong></span></label>
 </div></li>
 <li>Which bin has the quality value of -2.9215?
-<div id="radio_KECJQZLWZR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KECJQZLWZR" value="answer"></input> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KECJQZLWZR" value=""></input> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KECJQZLWZR" value=""></input> <span><strong>K1.22</strong></span></label>
+<div id="radio_ARGFHSWYEM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ARGFHSWYEM" value="answer"></input> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ARGFHSWYEM" value=""></input> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ARGFHSWYEM" value=""></input> <span><strong>K1.22</strong></span></label>
 </div></li>
 <li>Which bin has the highest completeness value (98.59%)?
-<div id="radio_HKOFUVYFYI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HKOFUVYFYI" value=""></input> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HKOFUVYFYI" value="answer"></input> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HKOFUVYFYI" value=""></input> <span><strong>K1.22</strong></span></label>
+<div id="radio_WOOMLCYWFV" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WOOMLCYWFV" value=""></input> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WOOMLCYWFV" value="answer"></input> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WOOMLCYWFV" value=""></input> <span><strong>K1.22</strong></span></label>
 </div></li>
 </ol>
 </div>
