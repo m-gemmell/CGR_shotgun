@@ -2335,7 +2335,7 @@ cd ~/7-Binning/K1/
 Run the `CoCoPyE` command (this will take a while):
 
 ```{bash eval=FALSE}
-CoCoPyE run \
+cocopye run \
 -t 12 \
 -i bins/ \
 -o cocopye_output.csv
