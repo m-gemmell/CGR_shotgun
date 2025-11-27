@@ -47,9 +47,21 @@ frameborder="0" allowfullscreen class="video"></iframe>
 
 ## HUMAnN & bioBakery
 
+<div class="container">
+<iframe src="https://www.youtube.com/embed/7KH9xHWIjZw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+
 [__Slides__](https://docs.google.com/presentation/d/1DWh82hNgzl0Hu6NgfyADmRmxyBLTO_8hYLC3ySwxHkk/edit?usp=sharing)
 
 ## Assembly approach
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/GLZu6bcakX8" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
 
 [__Slides__](https://docs.google.com/presentation/d/1zN7aHaRk_cZkmBXva01RFfjRV3wGTzBEudGuce8c9Z4/edit?usp=sharing)
 
