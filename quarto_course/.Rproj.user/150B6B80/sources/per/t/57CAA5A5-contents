@@ -1,0 +1,92 @@
+--- 
+favicon: /images/NEOF_favicon.png
+description: NEOF book for the Metabarcoding for diet analysis and environmental DNA workshop resources
+cover-image: "/images/NEOF.png"
+title: "Metabarcoding for diet analysis and environmental DNA files resources"
+author: "Deborah Dawson, Gavin Gouws, Ewan Harney, Helen Hipperson, Tom Holden, Gavin Horsburgh, Lucy Knowles & Katy Maher"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+---
+
+```{r, fig.align = 'center',out.width= '30%', echo=FALSE }
+knitr::include_graphics(path = "/images/NEOF.png", auto_pdf = TRUE)
+``` 
+
+# Course contacts
+Visitor Facility, wet lab & bioinformatics [__contacts__](https://github.com/NEOF-workshops/NEOF-workshops.github.io/blob/main/Metabarcoding_6xxzqz/resources/wet_lab_docs_Jul_2024/Course%20Contacts.pdf)
+
+# Videos, slides, & files
+
+## Wetlab
+
+[__Slides__](https://github.com/NEOF-workshops/NEOF-workshops.github.io/blob/main/Metabarcoding_6xxzqz/resources/wet_lab_docs_Jul_2024/eDNA%20Lab%20Presentation%20July%202024.pdf)
+
+[__Handout__](https://github.com/NEOF-workshops/NEOF-workshops.github.io/blob/main/Metabarcoding_6xxzqz/resources/wet_lab_docs_Jul_2024/Metabarcoding%20WetLab%20Handout%20July%202024.pdf)
+
+## Bioinformatics 1st presentation - Introduction
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/9aND5JCqNnw" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[__Slides__](https://docs.google.com/presentation/d/1H1K26oICKTOy27P0qaqB2_NNuikkz2JHJvumPmYXUNo/edit?usp=sharing)
+
+## Bioinformatics 2nd presentation - ASVs & Taxonomy in dada2
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/I_gVoI3QJDA" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[__Slides__](https://docs.google.com/presentation/d/1UviGymcwnZXKR-jxN5E27BC4_pRbg9MBJpKw_vspg9c/edit?usp=sharing)
+
+## Bioinformatics 3rd presentation - Diversity & Taxonomy
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/m7skEPiol5s" 
+frameborder="0" allowfullscreen class="video"></iframe>
+</div>
+
+[__Slides__](https://docs.google.com/presentation/d/1o1OdnU36GBgUtyrWG46TwaEEbnQN-6c_LLGDlJIy5eI/edit?usp=sharing)
+
+## Bioinformatics 4th presentation - wrap-up
+
+[__Slides__](https://docs.google.com/presentation/d/1ggLZcGO71CfQu-LAKl05jlcuK3Bc2WHjeN2rULIIyhE/edit?usp=sharing)
+
+## Visitor facilty talk
+
+[__Slides__](https://drive.google.com/file/d/14Dh3wxqg31c7jdW6J-NOo1tHo2pjOhJK/view?usp=sharing)
+
+## Workshop files
+
+The below compressed directory is provided so you may attempt the workshop materials on a computer/cluster available to you.
+
+Note:
+
+- The file locations will not match
+- Copy the link and paste it to your browser's address bar.
+
+[__Download files__](https://www.cgr.liv.ac.uk/illum/NEOFworkshops_5bfa93ca0482d69d/Metabarcoding/data/metabarcoding_workshop.zip)
+
+[__Download an example Jupyter notebook file__](https://github.com/khmaher/metabarcoding_course/blob/main/Download_pages/NERC_Other_files/DADA2_analysis_pipeline_MiFish-U_primer_set.ipynb)
+
+## Bookdown html
+
+Links to the online version of the Bookdowns.
+
+- [__Main__](https://neof-workshops.github.io/Metabarcoding_6xxzqz/Course/)
+- [__Supplemental__](https://neof-workshops.github.io/Metabarcoding_6xxzqz/Supplemental/)
+
+You can download the html files of the bookdown below. Ensure you unzip the directory before use.
+
+- [__Download main zipped bookdown__](https://NEOF-workshops.github.io/Metabarcoding_6xxzqz/resources/Bookdown/Metabarcoding_main.zip)
+- [__Download supplemental zipped bookdown__](https://NEOF-workshops.github.io/Metabarcoding_6xxzqz/resources/Bookdown/Metabarcoding_supplemental.zip)
+
+<br />
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
