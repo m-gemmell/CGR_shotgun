@@ -566,21 +566,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <img src="..\images/parameter_blue.png" class="img-fluid" style="width:100px; background: white; border-radius:5px; border: white solid 5px">
 </center>
 <ul>
-<li><code>-r</code>: Single-end reads to be used for assembly.
+<li><code>-r</code>: Single-end reads to be used for assembly
 <ul>
-<li>We are using our successfully stitched reads.</li>
+<li>We are using our successfully stitched reads</li>
 </ul></li>
 <li><code>-1</code>: Forward reads of paired end reads to be used for assembly.
 <ul>
-<li>We are using the reads that did not stitch as they still have useful information.</li>
+<li>We are using the reads that did not stitch as they still have useful information</li>
 </ul></li>
 <li><code>-2</code>: Reverse reads of paired end reads to be used for assembly.
 <ul>
-<li>We are using the reads that did not stitch as they still have useful information.</li>
+<li>We are using the reads that did not stitch as they still have useful information</li>
 </ul></li>
-<li><code>-o</code>: Output directory.</li>
-<li><code>-t</code>: Number of threads to be used for process.</li>
-<li><code>--k-list</code>: <u id="kmer">K-mer</u> list.</li>
+<li><code>-o</code>: Output directory</li>
+<li><code>-t</code>: Number of threads to be used for process</li>
+<li><code>--k-list</code>: <u id="kmer">K-mer</u> list</li>
 </ul>
 <p>The <strong><u id="kmer">k-mer</u> list</strong> instructs <code>MEGAHIT</code> to first generate an assembly using a <u id="kmer">k-mer</u> size of 29 bp and when that is complete, integrate the results into an assembly using a <u id="kmer">k-mer</u> size of 49 bp, and so on up to a final iteration using a <u id="kmer">k-mer</u> size of 189 bp. This large range of <u id="kmer">k-mer</u> lengths should give us a good assembly, given the data. However, it may take a while to run. This might be a good time to read on or take a break whilst the command runs.</p>
 <p>If you need a command prompt (your current one is busy because MEGAHIT is running), right click on the main screen, choose <code>Terminal</code>.</p>
@@ -625,11 +625,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The report tells us quite a bit about the assembly quality. Two definitions that you may not be aware of are <strong>N50</strong> and <strong>L50</strong>. To calculate these values:</p>
 <ul>
-<li>Order the contigs from largest to smallest.</li>
-<li>Total up the sizes from biggest downwards.</li>
-<li>The contig we reach where our total is at least 50% of the size of the whole assembly is the N50 contig.</li>
-<li><strong>N50</strong> equals the length of the N50 contig.</li>
-<li><strong>L50</strong> is the number of contigs with a length equal to or greater than N50.</li>
+<li>Order the contigs from largest to smallest</li>
+<li>Total up the sizes from biggest downwards</li>
+<li>The contig we reach where our total is at least 50% of the size of the whole assembly is the N50 contig</li>
+<li><strong>N50</strong> equals the length of the N50 contig</li>
+<li><strong>L50</strong> is the number of contigs with a length equal to or greater than N50</li>
 </ul>
 <center>
 <img src="..\images/n50_n90.png" class="img-fluid" style="border-radius: 15px; width: 400px; border: 5px solid white">
@@ -645,38 +645,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Note:</strong> Due to the assembly process your values may be slightly different (&lt; 1%). Please choose the closest value.</p>
 <ol type="1">
 <li>What is the total length of the assembly?
-<div id="radio_IOPEAGNMRZ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_IOPEAGNMRZ" value=""> <span><strong>39.88</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IOPEAGNMRZ" value=""> <span><strong>18,650</strong></span></label><label><input type="radio" autocomplete="off" name="radio_IOPEAGNMRZ" value="answer"> <span><strong>16,187,259</strong></span></label>
+<div id="radio_MXIOPMSQCG" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MXIOPMSQCG" value=""> <span><strong>39.88</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MXIOPMSQCG" value=""> <span><strong>18,650</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MXIOPMSQCG" value="answer"> <span><strong>16,187,259</strong></span></label>
 </div></li>
 </ol>
 <ol start="2" type="1">
 <li>How many contigs does the assembly consist of?
-<div id="radio_TROUUDMBPD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TROUUDMBPD" value=""> <span><strong>39.88</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TROUUDMBPD" value="answer"> <span><strong>18,650</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TROUUDMBPD" value=""> <span><strong>16,187,259</strong></span></label>
+<div id="radio_PWFOFRRAFU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PWFOFRRAFU" value=""> <span><strong>39.88</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PWFOFRRAFU" value="answer"> <span><strong>18,650</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PWFOFRRAFU" value=""> <span><strong>16,187,259</strong></span></label>
 </div></li>
 </ol>
 <ol start="3" type="1">
 <li>What is the GC% of the assembly?
-<div id="radio_XFOAJIDBJU" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XFOAJIDBJU" value="answer"> <span><strong>39.88</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XFOAJIDBJU" value=""> <span><strong>18,650</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XFOAJIDBJU" value=""> <span><strong>16,187,259</strong></span></label>
+<div id="radio_EJXMVCIRRP" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_EJXMVCIRRP" value="answer"> <span><strong>39.88</strong></span></label><label><input type="radio" autocomplete="off" name="radio_EJXMVCIRRP" value=""> <span><strong>18,650</strong></span></label><label><input type="radio" autocomplete="off" name="radio_EJXMVCIRRP" value=""> <span><strong>16,187,259</strong></span></label>
 </div></li>
 </ol>
 <ol start="4" type="1">
 <li>What is the N50 of the assembly?
-<div id="radio_ZESHVNBJAH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZESHVNBJAH" value="answer"> <span><strong>1,363</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZESHVNBJAH" value=""> <span><strong>2,178</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZESHVNBJAH" value=""> <span><strong>87,586</strong></span></label>
+<div id="radio_ZLMHUNQYSJ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZLMHUNQYSJ" value="answer"> <span><strong>1,363</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZLMHUNQYSJ" value=""> <span><strong>2,178</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZLMHUNQYSJ" value=""> <span><strong>87,586</strong></span></label>
 </div></li>
 </ol>
 <ol start="5" type="1">
 <li>What is the L50 of the assembly?
-<div id="radio_HALRDDOAWI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_HALRDDOAWI" value=""> <span><strong>1,363</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HALRDDOAWI" value="answer"> <span><strong>2,178</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HALRDDOAWI" value=""> <span><strong>87,586</strong></span></label>
+<div id="radio_NVIBYGVASH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_NVIBYGVASH" value=""> <span><strong>1,363</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NVIBYGVASH" value="answer"> <span><strong>2,178</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NVIBYGVASH" value=""> <span><strong>87,586</strong></span></label>
 </div></li>
 </ol>
 <ol start="6" type="1">
 <li>What is the length of the largest contig?
-<div id="radio_WBWFEXBHST" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WBWFEXBHST" value=""> <span><strong>1,363</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WBWFEXBHST" value=""> <span><strong>2,178</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WBWFEXBHST" value="answer"> <span><strong>87,586</strong></span></label>
+<div id="radio_HYBHPJBAEN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HYBHPJBAEN" value=""> <span><strong>1,363</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HYBHPJBAEN" value=""> <span><strong>2,178</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HYBHPJBAEN" value="answer"> <span><strong>87,586</strong></span></label>
 </div></li>
 </ol>
 <p><strong>Questions</strong></p>
@@ -695,8 +695,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>There is also a <a href="https://quast.sourceforge.net/metaquast"><code>metaQUAST</code></a> specifically for metagenome assemblies but it requires reference assemblies.</p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-1cc421de2a3d13834db9" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-1cc421de2a3d13834db9">{"x":{"element":"kmer","opts":{"content":"Substrings of length k within a DNA/RNA sequence. \n                              The 1-mers of 'AGCT' are 'A', 'G', 'C', and 'T'. \n                              Its 2-mers are 'AG', 'GC' and 'CT'. \n                              Its 3-mers are 'AGC' and GCT'. \n                              Its 4-mer is 'AGCT'.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-18f9ba0e77659f742c90" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-18f9ba0e77659f742c90">{"x":{"element":"kmer","opts":{"content":"Substrings of length k within a DNA/RNA sequence. \n                              The 1-mers of 'AGCT' are 'A', 'G', 'C', and 'T'. \n                              Its 2-mers are 'AG', 'GC' and 'CT'. \n                              Its 3-mers are 'AGC' and GCT'. \n                              Its 4-mer is 'AGCT'.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

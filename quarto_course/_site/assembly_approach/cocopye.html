@@ -576,14 +576,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Analysis finds that our query genome contains the domain families PDD-R. We therefore acquire the below results:</p>
 <ul>
-<li>The query genome is classified as belonging to the Gigabacteria lineage as it contains many (in this case all) the domains unique to Gigabacteria (PDG-P) and many of the domains shared by both bacteria.</li>
+<li>The query genome is classified as belonging to the Gigabacteria lineage as it contains many (in this case all) the domains unique to Gigabacteria (PDG-P) and many of the domains shared by both bacteria</li>
 <li>Completeness: 81.25%
 <ul>
 <li>It is missing 3 of the domains found in Gigabacteria (PDA-C) 13/16 = 0.8125 = 81.25%</li>
 </ul></li>
 <li>Contamination: 13.33%
 <ul>
-<li>Of the 15 domains our query has 2 of them do not belong to it in the reference (PDQ &amp; PDR) 2/15 = 0.1333 = 13.33%.</li>
+<li>Of the 15 domains our query has 2 of them do not belong to it in the reference (PDQ &amp; PDR) 2/15 = 0.1333 = 13.33%</li>
 </ul></li>
 </ul>
 </section>
@@ -602,10 +602,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="unnumbered anchored" data-anchor-id="count-ratio-histogram">Count Ratio Histogram</h4>
 <p>Each Pfam domain family is given a count ratio of Cq:Cr.</p>
 <ul>
-<li>Cq: The count of the domain family in the query genome.</li>
-<li>Cr: The count of the domain family in the reference genome.
+<li>Cq: The count of the domain family in the query genome</li>
+<li>Cr: The count of the domain family in the reference genome
 <ul>
-<li>The reference genome is determined in stage I.</li>
+<li>The reference genome is determined in stage I</li>
 </ul></li>
 </ul>
 <p>Examples:</p>
@@ -635,12 +635,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The relative frequency of all the different domain count ratios are used to create a histogram, the CRH. The process itself will use a text histogram but below are two visualisations of CRHs.</p>
 <p>The main features of a CRH are:</p>
 <ul>
-<li><strong>The central point (1/1):</strong> This indicates high completeness and low contamination.
+<li><strong>The central point (1/1):</strong> This indicates high completeness and low contamination
 <ul>
-<li>If the central peak contained 100% of the count ratios this would indicate 100% completeness and 0% contamination.</li>
+<li>If the central peak contained 100% of the count ratios this would indicate 100% completeness and 0% contamination</li>
 </ul></li>
-<li><strong>Right of the central point:</strong> Histogram bins on the right hand side indicate contamination.</li>
-<li><strong>Left of the central point:</strong> Histogram bins on the left hand side indicate decreasing completeness.</li>
+<li><strong>Right of the central point:</strong> Histogram bins on the right hand side indicate contamination</li>
+<li><strong>Left of the central point:</strong> Histogram bins on the left hand side indicate decreasing completeness</li>
 </ul>
 <center>
 <img src="..\images/crh1.png" class="img-fluid" style="width: 600px; border-radius: 5px; border: white 5px solid"> <br><em>The Above plot was created from a query genome with 61% completeness and 30% contamination.</em>
@@ -692,20 +692,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <img src="..\images/parameter_black.png" class="img-fluid" style="width:100px; background: white; border-radius: 5px; border: 5px white solid">
 </center>
 <ul>
-<li><code>-t</code> : Number of threads/cores/CPUs to utilise for the process.</li>
-<li><code>-i</code> : Input directory containing the bins in FASTA format.</li>
-<li><code>-o</code> : Output file (more info below).</li>
+<li><code>-t</code> : Number of threads/cores/CPUs to utilise for the process</li>
+<li><code>-i</code> : Input directory containing the bins in FASTA format</li>
+<li><code>-o</code> : Output file (more info below)</li>
 </ul>
 <p>Other options include:</p>
 <ul>
-<li><code>--file-extensions</code> : The allowed file extensions for input files within the input directory.
+<li><code>--file-extensions</code> : The allowed file extensions for input files within the input directory
 <ul>
-<li>The default is <code>fasta,fna,fa</code>. Our bin files produced from <code>MetaBAT2</code> have the file extension/suffix of <code>.fa</code> so the default works.</li>
+<li>The default is <code>fasta,fna,fa</code></li>
+<li>Our bin files produced from <code>MetaBAT2</code> have the file extension/suffix of <code>.fa</code> so the default works</li>
 </ul></li>
 <li><code>-v</code> : The output file verbosity.
 <ul>
-<li>Values are: <code>standard</code> (default), <code>extended</code>, and <code>full</code>.</li>
-<li>More information on the output below.</li>
+<li>Values are: <code>standard</code> (default), <code>extended</code>, and <code>full</code></li>
+<li>More information on the output below</li>
 </ul></li>
 </ul>
 </section>
@@ -752,8 +753,8 @@ CoCoPye statistics definitions
 <p>There is a lot of information. In the next chapter we’ll calculate a bin quality score value with the <code>CoCoPyE</code> statistics.</p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-d95af3672c9470adfca9" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-d95af3672c9470adfca9">{"x":{"element":"mag","opts":{"content":"Metagenome-Assembled Genome","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-ff80425bf92edbef28e2" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-ff80425bf92edbef28e2">{"x":{"element":"mag","opts":{"content":"Metagenome-Assembled Genome","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

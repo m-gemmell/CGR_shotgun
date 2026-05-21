@@ -612,11 +612,17 @@ q = comp - (5 * cont)
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-F,</span> <span class="st">'{print $2,$3}'</span> cocopye_output.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
-<li><code>-F,</code>: Indicates the input fields are separated by commas (<code>,</code>).</li>
-<li><code>''</code>: All the <code>awk</code> options are contained within the quotes.</li>
-<li><code>{}</code>: We can supply a function to <code>awk</code> within the braces.</li>
-<li><code>print $2,$3</code>: This function instructs <code>awk</code> to print the 2nd (completeness) and 3rd (contamination) fields. It is common to put commas (<code>,</code>) between fields if printing multiple fields.</li>
-<li><code>cocopye_output.csv</code>: Our last parameter is the input file. We are not changing the contents of the file, only printing information to screen/stdout.</li>
+<li><code>-F,</code>: Indicates the input fields are separated by commas (<code>,</code>)</li>
+<li><code>''</code>: All the <code>awk</code> options are contained within the quotes</li>
+<li><code>{}</code>: We can supply a function to <code>awk</code> within the braces</li>
+<li><code>print $2,$3</code>: This function instructs <code>awk</code> to print the 2nd (completeness) and 3rd (contamination) fields
+<ul>
+<li>It is common to put commas (<code>,</code>) between fields if printing multiple fields</li>
+</ul></li>
+<li><code>cocopye_output.csv</code>: Our last parameter is the input file
+<ul>
+<li>We are not changing the contents of the file, only printing information to screen/stdout.</li>
+</ul></li>
 </ul>
 </section>
 <section id="ignore-header" class="level3">
@@ -626,7 +632,11 @@ q = comp - (5 * cont)
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-F,</span> <span class="st">'NR&gt;1 {print $2,$3}'</span> cocopye_output.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
-<li><code>NR&gt;1</code>: <code>NR</code> stands for number of records. Rows are called records in <code>awk</code>. Therefore <code>NR&gt;1</code> means <code>awk</code> will only carry out the functions on the records numbered greater than 1. I.e. skip row 1, the header row.</li>
+<li><code>NR&gt;1</code>: <code>NR</code> stands for number of records
+<ul>
+<li>Rows are called records in <code>awk</code></li>
+<li>Therefore, <code>NR&gt;1</code> means <code>awk</code> will only carry out the functions on the records numbered greater than 1. I.e. skip row 1, the header row</li>
+</ul></li>
 </ul>
 </section>
 <section id="calculate-quality" class="level3">
@@ -687,56 +697,56 @@ q = comp - (5 * cont)
 </div>
 <ol type="1">
 <li>What lineage was assigned to bin <strong>K1.1</strong>?
-<div id="radio_VGIYLWTEAC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_VGIYLWTEAC" value=""> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_VGIYLWTEAC" value="answer"> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_VGIYLWTEAC" value=""> <span><strong>Lachnospiraceae</strong></span></label>
+<div id="radio_GUQCCIPKBE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GUQCCIPKBE" value=""> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GUQCCIPKBE" value="answer"> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GUQCCIPKBE" value=""> <span><strong>Lachnospiraceae</strong></span></label>
 </div></li>
 </ol>
 <ol start="2" type="1">
 <li>What lineage was assigned to bin <strong>K1.22</strong>?
-<div id="radio_ZDJOLCGCEO" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_ZDJOLCGCEO" value=""> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZDJOLCGCEO" value=""> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZDJOLCGCEO" value="answer"> <span><strong>Lachnospiraceae</strong></span></label>
+<div id="radio_SUSNHQTUTE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SUSNHQTUTE" value=""> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_SUSNHQTUTE" value=""> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_SUSNHQTUTE" value="answer"> <span><strong>Lachnospiraceae</strong></span></label>
 </div></li>
 </ol>
 <ol start="3" type="1">
 <li>What lineage was assigned to bin <strong>K1.8</strong>?
-<div id="radio_MCWRITILMH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MCWRITILMH" value="answer"> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MCWRITILMH" value=""> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MCWRITILMH" value=""> <span><strong>Lachnospiraceae</strong></span></label>
+<div id="radio_WSIOORTZIO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_WSIOORTZIO" value="answer"> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WSIOORTZIO" value=""> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WSIOORTZIO" value=""> <span><strong>Lachnospiraceae</strong></span></label>
 </div></li>
 </ol>
 <ol start="4" type="1">
 <li>What is the quality value of <strong>K1.1</strong>?
-<div id="radio_KUHRKSVFXN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_KUHRKSVFXN" value=""> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KUHRKSVFXN" value="answer"> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KUHRKSVFXN" value=""> <span><strong>0.9769</strong></span></label>
+<div id="radio_RQKHSYWNDX" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_RQKHSYWNDX" value=""> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RQKHSYWNDX" value="answer"> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RQKHSYWNDX" value=""> <span><strong>0.9769</strong></span></label>
 </div></li>
 </ol>
 <ol start="5" type="1">
 <li>What is the completeness value of <strong>K1.30</strong>?
-<div id="radio_TOKETRINCE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TOKETRINCE" value=""> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TOKETRINCE" value=""> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TOKETRINCE" value="answer"> <span><strong>0.9769</strong></span></label>
+<div id="radio_BYPJFUBTKU" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_BYPJFUBTKU" value=""> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_BYPJFUBTKU" value=""> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_BYPJFUBTKU" value="answer"> <span><strong>0.9769</strong></span></label>
 </div></li>
 </ol>
 <ol start="6" type="1">
 <li>What is the contamination value of <strong>K1.12</strong> bin?
-<div id="radio_AUXKDXWWEC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_AUXKDXWWEC" value="answer"> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_AUXKDXWWEC" value=""> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_AUXKDXWWEC" value=""> <span><strong>0.9769</strong></span></label>
+<div id="radio_FHZIUJXGBD" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FHZIUJXGBD" value="answer"> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FHZIUJXGBD" value=""> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FHZIUJXGBD" value=""> <span><strong>0.9769</strong></span></label>
 </div></li>
 </ol>
 <ol start="7" type="1">
 <li>Which bin has the highest quality value (98.38%)?
-<div id="radio_RIGWHRCRSZ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_RIGWHRCRSZ" value=""> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RIGWHRCRSZ" value=""> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RIGWHRCRSZ" value="answer"> <span><strong>K1.22</strong></span></label>
+<div id="radio_MXMCTDABGR" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MXMCTDABGR" value=""> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MXMCTDABGR" value=""> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MXMCTDABGR" value="answer"> <span><strong>K1.22</strong></span></label>
 </div></li>
 </ol>
 <ol start="8" type="1">
 <li>Which bin has the quality value of -2.9215?
-<div id="radio_PNFRQUSRHQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_PNFRQUSRHQ" value="answer"> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PNFRQUSRHQ" value=""> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PNFRQUSRHQ" value=""> <span><strong>K1.22</strong></span></label>
+<div id="radio_PFYSFQLCDN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PFYSFQLCDN" value="answer"> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PFYSFQLCDN" value=""> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PFYSFQLCDN" value=""> <span><strong>K1.22</strong></span></label>
 </div></li>
 </ol>
 <ol start="9" type="1">
 <li>Which bin has the highest completeness value (98.59%)?
-<div id="radio_XLARAEEHME" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XLARAEEHME" value=""> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XLARAEEHME" value="answer"> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XLARAEEHME" value=""> <span><strong>K1.22</strong></span></label>
+<div id="radio_EWLYTDMEQZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_EWLYTDMEQZ" value=""> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_EWLYTDMEQZ" value="answer"> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_EWLYTDMEQZ" value=""> <span><strong>K1.22</strong></span></label>
 </div></li>
 </ol>
 </section>
@@ -749,8 +759,8 @@ q = comp - (5 * cont)
 <p>We have some good quality bins but many poorer quality bins too. Ultimately binning is trying to separate all the genomes from each other. A better metagenome assembly would most likely have led to better binning.</p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-797375fb7df91557b247" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-797375fb7df91557b247">{"x":{"element":"mag","opts":{"content":"Metagenome-Assembled Genome","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-7286f02a7fe341584d8d" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-7286f02a7fe341584d8d">{"x":{"element":"mag","opts":{"content":"Metagenome-Assembled Genome","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
