@@ -21,7 +21,7 @@ website:
     - text: QC
       href: data_and_qc/raw_data.qmd
     - text: Reads
-      href: read_approach/taxonomic_profiling.qmd
+      href: read_approach/read_approach.qmd
     - text: Assembly
       href: assembly_approach\metagenome_assembly.qmd
     - text: Appendix
@@ -70,6 +70,7 @@ website:
     style: floating
     align: left
     contents:
+    - href: read_approach/read_approach.qmd
     - section: "Taxonomy of reads"
       contents:
       - href: read_approach\taxonomic_profiling.qmd
@@ -90,7 +91,11 @@ website:
     style: floating
     align: left
     contents:
-    - href: assembly_approach\metagenome_assembly.qmd
+    - section: "Metagenome intro"
+      contents:
+      - href: assembly_approach\metagenome_assembly.qmd
+      - href: assembly_approach/workflow.qmd
+      - href: assembly_approach\primer.qmd
     - section: "Assembly"
       contents:
       - href: assembly_approach\flash.qmd

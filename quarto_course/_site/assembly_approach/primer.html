@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tutorial – CGR Shotgun Metagenomics</title>
+<title>primer – CGR Shotgun Metagenomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../overview/shotgun_metagenomics.html" rel="prev">
+<link href="../assembly_approach/flash.html" rel="next">
+<link href="../assembly_approach/workflow.html" rel="prev">
 <link href="..//images/CGR_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -74,6 +75,22 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+<link href="../site_libs/tippyjs-3.2.0/themes/google.css" rel="stylesheet">
+
+<link href="../site_libs/tippyjs-3.2.0/themes/light-border.css" rel="stylesheet">
+
+<link href="../site_libs/tippyjs-3.2.0/themes/light.css" rel="stylesheet">
+
+<link href="../site_libs/tippyjs-3.2.0/themes/translucent.css" rel="stylesheet">
+
+<script src="../site_libs/tippyjs-3.2.0/tippy.all.min.js"></script>
+
+<script src="../site_libs/tippy-binding-0.1.0/tippy.js"></script>
+
 
 
 <link rel="stylesheet" href="../include/webex.css">
@@ -328,18 +345,128 @@ ul.task-list li input[type="checkbox"] {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Metagenome intro</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../overview/shotgun_metagenomics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
+  <a href="../assembly_approach/metagenome_assembly.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metagenome assembly</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../overview/tutorial.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tutorial overview</span></a>
+  <a href="../assembly_approach/workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workflow</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/primer.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">A primer on short read assembly</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Assembly</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/flash.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FLASH</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/megahit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MEGAHIT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Binning</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/genome_binning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metagenome binning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/depth_calculation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Depth calculation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/metabat2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MetaBAT2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/cocopye.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CoCoPyE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/bin_quality_scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bin quality scores</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Functional annotation of bins</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/assembly_functional_annotation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assembly functional annotation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/bakta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bakta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/minpath.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MinPath</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -350,13 +477,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tutorial-overview" id="toc-tutorial-overview" class="nav-link active" data-scroll-target="#tutorial-overview">Tutorial overview</a>
-  <ul class="collapse">
-  <li><a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics">Basics</a></li>
-  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure">Structure</a></li>
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
-  <li><a href="#next-section" id="toc-next-section" class="nav-link" data-scroll-target="#next-section">Next section</a></li>
-  </ul></li>
+  <li><a href="#a-primer-on-short-read-assembly" id="toc-a-primer-on-short-read-assembly" class="nav-link active" data-scroll-target="#a-primer-on-short-read-assembly">A primer on short read assembly</a></li>
   </ul>
 </nav>
     </div>
@@ -367,64 +488,41 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="tutorial-overview" class="level1">
-<h1>Tutorial overview</h1>
+<section id="a-primer-on-short-read-assembly" class="level2">
+<h2 class="anchored" data-anchor-id="a-primer-on-short-read-assembly">A primer on short read assembly</h2>
 <center>
-<img src="..\images/tutorial.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
+<img src="..\images/dna_laptop.png" class="img-fluid" style="width:150px; background: white; border-radius:5px; border: white solid 5px">
 </center>
-<section id="basics" class="level2">
-<h2 class="anchored" data-anchor-id="basics">Basics</h2>
-<p>This tutorial and practical session focuses on performing a range of metagenomic analyses using shotgun sequence data from the Illumina platforms.</p>
-<p>The analyses discussed here are by no means exhaustive and are instead intended to provide a sample of what can be done with a metagenomic dataset.</p>
-</section>
-<section id="structure" class="level2">
-<h2 class="anchored" data-anchor-id="structure">Structure</h2>
-<p>We prefer to allow people to work at a pace that they are comfortable with rather than ensuring that everyone is at the same point of the tutorial at the same time. There will be no instructor telling you what to type and click. Instead, everything you require to carry out the practical is written in this document. Take your time; it’s important to spend some time understanding why you are running the commands, rather than simply typing them out.</p>
-<p>If at any point you are having trouble or have a question, let one of us know and we’ll provide 1-to-1 assistance.</p>
-</section>
-<section id="content" class="level2">
-<h2 class="anchored" data-anchor-id="content">Content</h2>
-<center>
-<img src="..\images/sections.png" class="img-fluid" style="width:100px; border-radius:5px; background-color:white; border: solid white 5px">
-</center>
-<p>This practical is broken up into the following sections and parts.</p>
+<p>Illumina reads are too short and numerous to use traditional overlap-layout-consensus assemblers as such an approach would be far too computationally intensive. Instead, we use De Bruijn graph based assemblers. Briefly, these operate as follows:</p>
 <ol type="1">
-<li><strong><a href="../index.html">Intro</a>:</strong> Introduction and learning outcomes</li>
-<li><strong><a href="../index.html">Overview</a>:</strong> A quick overview of Shotgun metagenomics and the course structure</li>
-<li><strong>Data &amp; QC</strong>
-<ul>
-<li><strong><a href="../data_and_qc/raw_data.html">Raw data</a></strong>: We will first link to a dataset that we have downloaded for this tutorial. We will take a quick look at what the sequence files look like and briefly discuss the origin of the samples.</li>
-<li><strong><a href="../data_and_qc/trimming_data.html">Trimming data</a></strong>: This entails preprocessing our data to ensure that it is of good quality.</li>
-<li><strong><a href="../data_and_qc/host_removal.html">Host removal</a></strong>: When sequencing the genomic content of a host’s microbiota (bacteriome, archaeome, mycobiome, and more) it is likely you will also sequence the host’s genome. This step shows a method of removing possible host contamination.</li>
-</ul></li>
-<li><strong><a href="../read_approach/read_approach.html">Read approach</a></strong>
-<ul>
-<li><strong><a href="../read_approach/taxonomic_profiling.html">Taxonomic profiling</a></strong>: We will analyse the dataset to determine the species abundance in each sample. Following this, we will visualise the data and compare the samples.</li>
-<li><strong><a href="../read_approach/functional_profiling.html">Functional profiling</a></strong>: We will analyse the dataset to determine the pathway abundance and completeness in each sample. Following this, we will visualise the data and compare the samples.</li>
-</ul></li>
-<li><strong><a href="../assembly_approach/metagenome_assembly.html">Assembly approach</a></strong>
-<ul>
-<li><strong><a href="../assembly_approach/flash.html">Metagenome assembly</a></strong>: Here, we will move away from just analysing the reads directly and will assemble the metagenome into contigs. Prior to this, we will ‘stitch’ the reads together to ensure we get the best assembly possible.</li>
-<li><strong><a href="../assembly_approach/genome_binning.html">Binning</a></strong>: This step attempts to separate each assembled genomes into bins. These genome assemblies are called Metagenome-assembled Genomes (MAGs).</li>
-<li><strong><a href="../assembly_approach/assembly_functional_annotation.html">Functional annotation</a></strong>: We will take our MAGs, predict genes and then functionally annotate them with MetaCyc.</li>
-</ul></li>
-<li><strong>Appendix</strong>
-<ul>
-<li><a href="../appendix/mamba.html">Mamba</a>: Software and tool installation instructions using mamba</li>
-<li><a href="../appendix/next_steps.html">Next steps</a>: Suggestions on various websites to explore for further tools</li>
-<li><a href="../appendix/manuals.html">Manual</a>: Links to the manuals of the various tools and software used in this course</li>
-</ul></li>
+<li>All reads are broken down into k-length overlapping fragments (<u id="kmer">k-mers</u>). e.g.&nbsp;if we choose a <u id="kmer">k-mer</u> size of 5 bp, the following two sequences (blue) would be broken down into the <u id="kmer">k-mers</u> below them (red):</li>
 </ol>
-</section>
-<section id="next-section" class="level2">
-<h2 class="anchored" data-anchor-id="next-section">Next section</h2>
 <center>
-<img src="..\images/cluster.png" class="img-fluid" style="width:150px; background: white; border-radius:5px; border: white solid 5px">
+<img src="..\images/reads_aligned.png" class="img-fluid" style="border-radius: 10px; width: 400px">
 </center>
-<p>The next section is the <a href="../setup/cluster_intro.html">Setup section</a>.</p>
+<ol start="2" type="1">
+<li>All <u id="kmer">k-mers</u> are linked to other <u id="kmer">k-mers</u> which match with a k-1 length overlap (i.e.&nbsp;that overlap by all but one base):</li>
+</ol>
+<center>
+<img src="..\images/graph_simple.png" class="img-fluid" style="border-radius: 10px; width: 800px">
+</center>
+<ol start="3" type="1">
+<li>Paths are routed through the graph and longer contigs are generated:</li>
+</ol>
+<center>
+<img src="..\images/graph_complex.png" class="img-fluid" style="border-radius: 10px; width: 800px">
+</center>
+<p>The example here is a vast oversimplification of the complexity of a De Bruijn graph (i.e.&nbsp;there are no branches!). Routing through the graph is never as simple as this as some <u id="kmer">k-mers</u> will lead to multiple <u id="kmer">k-mers</u>, which can result in the break point of a contig. This is especially true for complex metagenomic data.</p>
+<p>Generally speaking, the shorter the <u id="kmer">k-mer</u>, the more branches there will be, the trickier the graph is to resolve, so the resulting contigs are smaller. Assemblers usually perform better with longer <u id="kmer">k-mer</u> lengths but even then there might not be enough depth of sequencing to generate all k-mers that form overlaps, therefore leading to break points. Finding the right <u id="kmer">k-mer</u> size usually involves testing several.</p>
+<p>Fortunately, the assembler we will use, <code>MEGAHIT</code>, allows us to build an assembly using multiple <u id="kmer">k-mer</u> lengths iteratively. The other great advantage about <code>MEGAHIT</code> is that it is quick and efficient. We will use <code>MEGAHIT</code> on our data soon, but first there is an additional processing step for our sequences…</p>
+<div class="cell">
+<div class="cell-output-display">
+<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-4e740da78c756a5219b0" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-4e740da78c756a5219b0">{"x":{"element":"kmer","opts":{"content":"Substrings of length k within a DNA/RNA sequence. \n                              The 1-mers of 'AGCT' are 'A', 'G', 'C', and 'T'. \n                              Its 2-mers are 'AG', 'GC' and 'CT'. \n                              Its 3-mers are 'AGC' and GCT'. \n                              Its 4-mer is 'AGCT'.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1255,11 +1353,14 @@ window.onload = function() {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../overview/shotgun_metagenomics.html" class="pagination-link" aria-label="Overview">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview</span>
+      <a href="../assembly_approach/workflow.html" class="pagination-link" aria-label="Workflow">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Workflow</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../assembly_approach/flash.html" class="pagination-link" aria-label="FLASH">
+        <span class="nav-page-text">FLASH</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

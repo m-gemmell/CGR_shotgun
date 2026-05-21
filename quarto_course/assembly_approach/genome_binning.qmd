@@ -14,8 +14,8 @@ A metagenome assembly consists of contigs from many different genomes. At this s
 
 To alleviate these issues genomic binning can be carried out. This will cluster contigs into bins based on:
 
-- __Coverage__: Contigs with similar coverage are more likely to be from the same genome.
-- __Composition__: Contigs with similar GC content are more likely to belong to the same genome.
+- __Depth__: Contigs with similar depth are more likely to be from the same genome
+- __Composition__: Contigs with similar GC content are more likely to belong to the same genome
 
 Genomic binning has been used to discover many new genomes. Additionally, it makes downstream analyses quicker as the downstream steps will be carried out on the sets of bins rather than on one large metagenome assembly.
 

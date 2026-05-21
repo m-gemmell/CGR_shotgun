@@ -255,9 +255,16 @@ done
 
 With these files you can then investigate what bins have which pathways. Additionally, with more samples analysed you can determine which samples have which pathways present.
 
+## Finish
+<center>
+![](/images/finish_flag.png){style="width:200px; background: white; border-radius:5px; border: 5px white solid;"}
+</center>
+
 Splendid!
 That is the end of the workshop materials aside from the appendix in the next chapter.
-I hope you enjoyed it and foudn it useful.
+I hope you enjoyed it and found it useful.
+
+There is also an [appendix](/appendix/mamba.qmd) with further information and resources.
 
 ```{r, echo=FALSE}
 #Tippy tooltips

@@ -80,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bf398aaaad6b0fdb21f4d44fa4ba6634.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-6b12071b1ce2e9fd8f013d9e8739b58f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-bf398aaaad6b0fdb21f4d44fa4ba6634.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-915e4266ce0e4a31097f949b2f157a4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-0a9e1fffec30c83bdb34004a38d2ef46.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-915e4266ce0e4a31097f949b2f157a4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -355,15 +355,15 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../data_and_qc/raw_data.html"> 
-<span class="menu-text">Data &amp; QC</span></a>
+<span class="menu-text">QC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../read_approach/taxonomic_profiling.html"> 
-<span class="menu-text">Read approach</span></a>
+    <a class="nav-link" href="../read_approach/read_approach.html"> 
+<span class="menu-text">Reads</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../assembly_approach/metagenome_assembly.html"> 
-<span class="menu-text">Assembly approach</span></a>
+<span class="menu-text">Assembly</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../appendix/mamba.html"> 
@@ -409,21 +409,44 @@ window.Quarto = {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assembly_approach/metagenome_assembly.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Metagenome assembly</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Assembly</span></a>
+ <span class="menu-text">Metagenome intro</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/metagenome_assembly.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metagenome assembly</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/workflow.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workflow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/primer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A primer on short read assembly</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Assembly</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assembly_approach/flash.html" class="sidebar-item-text sidebar-link">
@@ -440,13 +463,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
  <span class="menu-text">Binning</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assembly_approach/genome_binning.html" class="sidebar-item-text sidebar-link">
@@ -481,13 +504,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Functional annotation of bins</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../assembly_approach/assembly_functional_annotation.html" class="sidebar-item-text sidebar-link">
@@ -664,56 +687,56 @@ q = comp - (5 * cont)
 </div>
 <ol type="1">
 <li>What lineage was assigned to bin <strong>K1.1</strong>?
-<div id="radio_TEHLQYJIDN" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TEHLQYJIDN" value=""> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TEHLQYJIDN" value="answer"> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TEHLQYJIDN" value=""> <span><strong>Lachnospiraceae</strong></span></label>
+<div id="radio_VGIYLWTEAC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_VGIYLWTEAC" value=""> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_VGIYLWTEAC" value="answer"> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_VGIYLWTEAC" value=""> <span><strong>Lachnospiraceae</strong></span></label>
 </div></li>
 </ol>
 <ol start="2" type="1">
 <li>What lineage was assigned to bin <strong>K1.22</strong>?
-<div id="radio_FQIGKQSFBD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FQIGKQSFBD" value=""> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FQIGKQSFBD" value=""> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FQIGKQSFBD" value="answer"> <span><strong>Lachnospiraceae</strong></span></label>
+<div id="radio_ZDJOLCGCEO" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_ZDJOLCGCEO" value=""> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZDJOLCGCEO" value=""> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_ZDJOLCGCEO" value="answer"> <span><strong>Lachnospiraceae</strong></span></label>
 </div></li>
 </ol>
 <ol start="3" type="1">
 <li>What lineage was assigned to bin <strong>K1.8</strong>?
-<div id="radio_QDJVLWLTBI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QDJVLWLTBI" value="answer"> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QDJVLWLTBI" value=""> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QDJVLWLTBI" value=""> <span><strong>Lachnospiraceae</strong></span></label>
+<div id="radio_MCWRITILMH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MCWRITILMH" value="answer"> <span><strong>Bacteria</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MCWRITILMH" value=""> <span><strong>Bacteroides</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MCWRITILMH" value=""> <span><strong>Lachnospiraceae</strong></span></label>
 </div></li>
 </ol>
 <ol start="4" type="1">
 <li>What is the quality value of <strong>K1.1</strong>?
-<div id="radio_LWKFGHEYFL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_LWKFGHEYFL" value=""> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LWKFGHEYFL" value="answer"> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_LWKFGHEYFL" value=""> <span><strong>0.9769</strong></span></label>
+<div id="radio_KUHRKSVFXN" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_KUHRKSVFXN" value=""> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KUHRKSVFXN" value="answer"> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_KUHRKSVFXN" value=""> <span><strong>0.9769</strong></span></label>
 </div></li>
 </ol>
 <ol start="5" type="1">
 <li>What is the completeness value of <strong>K1.30</strong>?
-<div id="radio_QBGUSTAQNO" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_QBGUSTAQNO" value=""> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QBGUSTAQNO" value=""> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QBGUSTAQNO" value="answer"> <span><strong>0.9769</strong></span></label>
+<div id="radio_TOKETRINCE" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_TOKETRINCE" value=""> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TOKETRINCE" value=""> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TOKETRINCE" value="answer"> <span><strong>0.9769</strong></span></label>
 </div></li>
 </ol>
 <ol start="6" type="1">
 <li>What is the contamination value of <strong>K1.12</strong> bin?
-<div id="radio_DWDQNVMZRT" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_DWDQNVMZRT" value="answer"> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_DWDQNVMZRT" value=""> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_DWDQNVMZRT" value=""> <span><strong>0.9769</strong></span></label>
+<div id="radio_AUXKDXWWEC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_AUXKDXWWEC" value="answer"> <span><strong>0.0202</strong></span></label><label><input type="radio" autocomplete="off" name="radio_AUXKDXWWEC" value=""> <span><strong>0.6724</strong></span></label><label><input type="radio" autocomplete="off" name="radio_AUXKDXWWEC" value=""> <span><strong>0.9769</strong></span></label>
 </div></li>
 </ol>
 <ol start="7" type="1">
 <li>Which bin has the highest quality value (98.38%)?
-<div id="radio_YAXEVHIAFW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YAXEVHIAFW" value=""> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YAXEVHIAFW" value=""> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YAXEVHIAFW" value="answer"> <span><strong>K1.22</strong></span></label>
+<div id="radio_RIGWHRCRSZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_RIGWHRCRSZ" value=""> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RIGWHRCRSZ" value=""> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_RIGWHRCRSZ" value="answer"> <span><strong>K1.22</strong></span></label>
 </div></li>
 </ol>
 <ol start="8" type="1">
 <li>Which bin has the quality value of -2.9215?
-<div id="radio_FRFCTYCNGE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_FRFCTYCNGE" value="answer"> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FRFCTYCNGE" value=""> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FRFCTYCNGE" value=""> <span><strong>K1.22</strong></span></label>
+<div id="radio_PNFRQUSRHQ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PNFRQUSRHQ" value="answer"> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PNFRQUSRHQ" value=""> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PNFRQUSRHQ" value=""> <span><strong>K1.22</strong></span></label>
 </div></li>
 </ol>
 <ol start="9" type="1">
 <li>Which bin has the highest completeness value (98.59%)?
-<div id="radio_SCADRESCDQ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_SCADRESCDQ" value=""> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_SCADRESCDQ" value="answer"> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_SCADRESCDQ" value=""> <span><strong>K1.22</strong></span></label>
+<div id="radio_XLARAEEHME" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_XLARAEEHME" value=""> <span><strong>K1.20</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XLARAEEHME" value="answer"> <span><strong>K1.26</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XLARAEEHME" value=""> <span><strong>K1.22</strong></span></label>
 </div></li>
 </ol>
 </section>
@@ -726,8 +749,8 @@ q = comp - (5 * cont)
 <p>We have some good quality bins but many poorer quality bins too. Ultimately binning is trying to separate all the genomes from each other. A better metagenome assembly would most likely have led to better binning.</p>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-4dac7bb46ad4786ce268" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-4dac7bb46ad4786ce268">{"x":{"element":"mag","opts":{"content":"Metagenome-Assembled Genome","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-797375fb7df91557b247" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-797375fb7df91557b247">{"x":{"element":"mag","opts":{"content":"Metagenome-Assembled Genome","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

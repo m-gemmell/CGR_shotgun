@@ -33,7 +33,11 @@ $code-bg: #383838;
 body {
   font-family: "Lexend";
 }
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-family: "Lexend";
+  text-align: center;
+}
+h2, h3, h4, h5, h6 {
   font-family: "Lexend";
 }
 monofont {

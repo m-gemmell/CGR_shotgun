@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tutorial – CGR Shotgun Metagenomics</title>
+<title>workflow – CGR Shotgun Metagenomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../overview/shotgun_metagenomics.html" rel="prev">
+<link href="../assembly_approach/primer.html" rel="next">
+<link href="../assembly_approach/metagenome_assembly.html" rel="prev">
 <link href="..//images/CGR_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -328,18 +329,128 @@ ul.task-list li input[type="checkbox"] {
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Metagenome intro</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../overview/shotgun_metagenomics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
+  <a href="../assembly_approach/metagenome_assembly.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metagenome assembly</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../overview/tutorial.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Tutorial overview</span></a>
+  <a href="../assembly_approach/workflow.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Workflow</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/primer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">A primer on short read assembly</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Assembly</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/flash.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FLASH</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/megahit.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MEGAHIT</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Binning</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/genome_binning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Metagenome binning</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/depth_calculation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Depth calculation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/metabat2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MetaBAT2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/cocopye.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CoCoPyE</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/bin_quality_scores.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bin quality scores</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Functional annotation of bins</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/assembly_functional_annotation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assembly functional annotation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/bakta.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bakta</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../assembly_approach/minpath.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MinPath</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -350,12 +461,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tutorial-overview" id="toc-tutorial-overview" class="nav-link active" data-scroll-target="#tutorial-overview">Tutorial overview</a>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link active" data-scroll-target="#workflow">Workflow</a>
   <ul class="collapse">
-  <li><a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics">Basics</a></li>
-  <li><a href="#structure" id="toc-structure" class="nav-link" data-scroll-target="#structure">Structure</a></li>
-  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a></li>
-  <li><a href="#next-section" id="toc-next-section" class="nav-link" data-scroll-target="#next-section">Next section</a></li>
+  <li><a href="#metagenome-intro" id="toc-metagenome-intro" class="nav-link" data-scroll-target="#metagenome-intro">Metagenome intro</a></li>
+  <li><a href="#assembly" id="toc-assembly" class="nav-link" data-scroll-target="#assembly">Assembly</a></li>
+  <li><a href="#binning" id="toc-binning" class="nav-link" data-scroll-target="#binning">Binning</a></li>
+  <li><a href="#functional-annotation-of-bins" id="toc-functional-annotation-of-bins" class="nav-link" data-scroll-target="#functional-annotation-of-bins">Functional annotation of bins</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -367,61 +478,53 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="tutorial-overview" class="level1">
-<h1>Tutorial overview</h1>
+<section id="workflow" class="level1">
+<h1>Workflow</h1>
+<p>There are a lot of steps to our metagenome assembly approach. This page contains an overview of the workflow and this section.</p>
+<section id="metagenome-intro" class="level2">
+<h2 class="anchored" data-anchor-id="metagenome-intro">Metagenome intro</h2>
 <center>
-<img src="..\images/tutorial.png" class="img-fluid" style="width:200px; background: white; border-radius:5px; border: white solid 5px">
+<img src="..\images/jigsaw.png" class="img-fluid" style="width:200px; background: white; border-radius:5px">
 </center>
-<section id="basics" class="level2">
-<h2 class="anchored" data-anchor-id="basics">Basics</h2>
-<p>This tutorial and practical session focuses on performing a range of metagenomic analyses using shotgun sequence data from the Illumina platforms.</p>
-<p>The analyses discussed here are by no means exhaustive and are instead intended to provide a sample of what can be done with a metagenomic dataset.</p>
-</section>
-<section id="structure" class="level2">
-<h2 class="anchored" data-anchor-id="structure">Structure</h2>
-<p>We prefer to allow people to work at a pace that they are comfortable with rather than ensuring that everyone is at the same point of the tutorial at the same time. There will be no instructor telling you what to type and click. Instead, everything you require to carry out the practical is written in this document. Take your time; it’s important to spend some time understanding why you are running the commands, rather than simply typing them out.</p>
-<p>If at any point you are having trouble or have a question, let one of us know and we’ll provide 1-to-1 assistance.</p>
-</section>
-<section id="content" class="level2">
-<h2 class="anchored" data-anchor-id="content">Content</h2>
-<center>
-<img src="..\images/sections.png" class="img-fluid" style="width:100px; border-radius:5px; background-color:white; border: solid white 5px">
-</center>
-<p>This practical is broken up into the following sections and parts.</p>
 <ol type="1">
-<li><strong><a href="../index.html">Intro</a>:</strong> Introduction and learning outcomes</li>
-<li><strong><a href="../index.html">Overview</a>:</strong> A quick overview of Shotgun metagenomics and the course structure</li>
-<li><strong>Data &amp; QC</strong>
-<ul>
-<li><strong><a href="../data_and_qc/raw_data.html">Raw data</a></strong>: We will first link to a dataset that we have downloaded for this tutorial. We will take a quick look at what the sequence files look like and briefly discuss the origin of the samples.</li>
-<li><strong><a href="../data_and_qc/trimming_data.html">Trimming data</a></strong>: This entails preprocessing our data to ensure that it is of good quality.</li>
-<li><strong><a href="../data_and_qc/host_removal.html">Host removal</a></strong>: When sequencing the genomic content of a host’s microbiota (bacteriome, archaeome, mycobiome, and more) it is likely you will also sequence the host’s genome. This step shows a method of removing possible host contamination.</li>
-</ul></li>
-<li><strong><a href="../read_approach/read_approach.html">Read approach</a></strong>
-<ul>
-<li><strong><a href="../read_approach/taxonomic_profiling.html">Taxonomic profiling</a></strong>: We will analyse the dataset to determine the species abundance in each sample. Following this, we will visualise the data and compare the samples.</li>
-<li><strong><a href="../read_approach/functional_profiling.html">Functional profiling</a></strong>: We will analyse the dataset to determine the pathway abundance and completeness in each sample. Following this, we will visualise the data and compare the samples.</li>
-</ul></li>
-<li><strong><a href="../assembly_approach/metagenome_assembly.html">Assembly approach</a></strong>
-<ul>
-<li><strong><a href="../assembly_approach/flash.html">Metagenome assembly</a></strong>: Here, we will move away from just analysing the reads directly and will assemble the metagenome into contigs. Prior to this, we will ‘stitch’ the reads together to ensure we get the best assembly possible.</li>
-<li><strong><a href="../assembly_approach/genome_binning.html">Binning</a></strong>: This step attempts to separate each assembled genomes into bins. These genome assemblies are called Metagenome-assembled Genomes (MAGs).</li>
-<li><strong><a href="../assembly_approach/assembly_functional_annotation.html">Functional annotation</a></strong>: We will take our MAGs, predict genes and then functionally annotate them with MetaCyc.</li>
-</ul></li>
-<li><strong>Appendix</strong>
-<ul>
-<li><a href="../appendix/mamba.html">Mamba</a>: Software and tool installation instructions using mamba</li>
-<li><a href="../appendix/next_steps.html">Next steps</a>: Suggestions on various websites to explore for further tools</li>
-<li><a href="../appendix/manuals.html">Manual</a>: Links to the manuals of the various tools and software used in this course</li>
-</ul></li>
+<li><a href="../assembly_approach/metagenome_assembly.html">Metagenome assembly</a>: Introduction to the metagenome assembly section</li>
+<li><a href="../assembly_approach/workflow.html">Workflow</a>: Overview of the workflow and this section (this page)</li>
+<li><a href="../assembly_approach/primer.html">A primer on short read assembly</a>: Primer on the use of Illumina reads for metagenome assembly</li>
 </ol>
 </section>
-<section id="next-section" class="level2">
-<h2 class="anchored" data-anchor-id="next-section">Next section</h2>
+<section id="assembly" class="level2">
+<h2 class="anchored" data-anchor-id="assembly">Assembly</h2>
 <center>
-<img src="..\images/cluster.png" class="img-fluid" style="width:150px; background: white; border-radius:5px; border: white solid 5px">
+<img src="..\images/puzzle.png" class="img-fluid" style="width: 200px; border-radius: 15px; background-color: white">
 </center>
-<p>The next section is the <a href="../setup/cluster_intro.html">Setup section</a>.</p>
+<ol type="1">
+<li><a href="../assembly_approach/flash.html">FLASH</a>: Read stitching to improve assembly</li>
+<li><a href="../assembly_approach/megahit.html">MEGAHIT</a>: Metagenome assembly through an iterative k-mer approach</li>
+</ol>
+</section>
+<section id="binning" class="level2">
+<h2 class="anchored" data-anchor-id="binning">Binning</h2>
+<center>
+<img src="..\images/yarn_binning.png" class="img-fluid" style="width:300px; background: white; border-radius:5px; border: white solid 5px">
+</center>
+<ol type="1">
+<li><a href="../assembly_approach/genome_binning.html">Genome binning</a>: Introduction to genome binning</li>
+<li><a href="../assembly_approach/depth_calculation.html">Depth calculation</a>: Depth calculation required for binning</li>
+<li><a href="../assembly_approach/metabat2.html">MetaBAT2</a>: Binning the metagenome into MAGs</li>
+<li><a href="../assembly_approach/cocopye.html">CoCoPyE</a>: Quality assessment microbial genomes through completeness and contamination estimation</li>
+<li><a href="../assembly_approach/bin_quality_scores.html">Bin quality scores</a>: Calculation of bin quality using contamination and completeness scores</li>
+</ol>
+</section>
+<section id="functional-annotation-of-bins" class="level2">
+<h2 class="anchored" data-anchor-id="functional-annotation-of-bins">Functional annotation of bins</h2>
+<center>
+<img src="..\images/pathways.png" class="img-fluid" style="width:200px; background:white; border-radius:5px">
+</center>
+<ol type="1">
+<li><a href="../assembly_approach/assembly_functional_annotation.html">Assembly functional annotation</a>: Introduction to assembly functional annotation</li>
+<li><a href="../assembly_approach/bakta.html">Bakta</a>: Functional annotation of the microbial MAGs</li>
+<li><a href="../assembly_approach/minpath.html">MinPath</a>: Metabolic pathway prediction</li>
+</ol>
 
 
 </section>
@@ -1255,11 +1358,14 @@ window.onload = function() {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../overview/shotgun_metagenomics.html" class="pagination-link" aria-label="Overview">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview</span>
+      <a href="../assembly_approach/metagenome_assembly.html" class="pagination-link" aria-label="Metagenome assembly">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Metagenome assembly</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../assembly_approach/primer.html" class="pagination-link" aria-label="A primer on short read assembly">
+        <span class="nav-page-text">A primer on short read assembly</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
