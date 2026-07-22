@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.23">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>krona – CGR Shotgun Metagenomics</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -70,19 +73,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="..//images/CGR_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6f6599830d51be977da3b6af758f8eff.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-915e4266ce0e4a31097f949b2f157a4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-0a9e1fffec30c83bdb34004a38d2ef46.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-915e4266ce0e4a31097f949b2f157a4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6b948d182f74bb96291c9b96b765a13f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-91b4c70ba7c68ee040599dca7a410b8a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6b948d182f74bb96291c9b96b765a13f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -284,8 +286,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">CGR Shotgun Metagenomics</span>
     </a>
@@ -297,7 +297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Intro</span></a>
   </li>  
   <li class="nav-item">
@@ -313,7 +313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">QC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../read_approach/read_approach.html"> 
+    <a class="nav-link active" href="../read_approach/read_approach.html" aria-current="page"> 
 <span class="menu-text">Reads</span></a>
   </li>  
   <li class="nav-item">
@@ -358,10 +358,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -470,6 +466,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#krona" id="toc-krona" class="nav-link active" data-scroll-target="#krona">Krona</a>
   <ul class="collapse">
+  <li><a href="#kraken2-report-to-krona" id="toc-kraken2-report-to-krona" class="nav-link" data-scroll-target="#kraken2-report-to-krona">Kraken2 report to krona</a></li>
   <li><a href="#import-taxonomy" id="toc-import-taxonomy" class="nav-link" data-scroll-target="#import-taxonomy">Import taxonomy</a></li>
   <li><a href="#tiered-piecharts" id="toc-tiered-piecharts" class="nav-link" data-scroll-target="#tiered-piecharts">Tiered piecharts</a></li>
   <li><a href="#mcqs" id="toc-mcqs" class="nav-link" data-scroll-target="#mcqs">MCQs</a></li>
@@ -490,23 +487,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <img src="..\images/krona.png" class="img-fluid" style="width:150px; background: white; border-radius:5px; border: white solid 5px">
 </center>
 <p><code>Krona</code> is an interactive metagenome species abundance visualisation tool. We will use it to produce interactive tiered pie charts from our <code>Kraken2</code> output.</p>
+<section id="kraken2-report-to-krona" class="level2">
+<h2 class="anchored" data-anchor-id="kraken2-report-to-krona">Kraken2 report to krona</h2>
+<p>Prior to creating our html pie charts we need to convert our kraken2 reports to krona text files. We’ll carry this out with the <a href="https://github.com/jenniferlu717/KrakenTools"><code>KrakenTools</code></a> script: <code>kreport2krona.py</code>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ensure you type the full python script as it is below. <br> For information on how to download and use the python script in your own computer/environment please see the <a href="..\appendix/mamba/qmd#shotgun_meta">appendix</a></p>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Krona conversion for K1</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> /pub14/tea/nsc206/git_installs/KrakenTools/kreport2krona.py <span class="at">-r</span> K1.kreport2 <span class="at">-o</span> K1.krona</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Krona conversion for K2</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> /pub14/tea/nsc206/git_installs/KrakenTools/kreport2krona.py <span class="at">-r</span> K2.kreport2 <span class="at">-o</span> K2.krona</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Krona conversion for W1</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> /pub14/tea/nsc206/git_installs/KrakenTools/kreport2krona.py <span class="at">-r</span> W1.kreport2 <span class="at">-o</span> W1.krona</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li><code>-r</code> is our input report file</li>
+<li><code>-o</code> is our output krona text file</li>
+</ul>
+<div class="webex-solution">
+<button>
+Loop method
+</button>
+<p>Rather than running the command for each line you can carry it out with a loop. If you run the below first ensure your current directory only has <code>.kreport2</code> files that you want included.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-1</span> <span class="pp">*</span>kreport2 <span class="kw">|</span> <span class="fu">sed</span> <span class="st">"s/.kreport2//"</span> <span class="kw">|</span> <span class="cf">while</span> <span class="bu">read</span> <span class="va">sample</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> /pub14/tea/nsc206/git_installs/KrakenTools/kreport2krona.py <span class="dt">\</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>-r <span class="va">${sample}</span>.kreport2 <span class="dt">\</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>-o <span class="va">${sample}</span>.krona</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>The actual content of the krona text file is not of interest as the file is only really useful for creating the interactive krona charts.</p>
+</section>
 <section id="import-taxonomy" class="level2">
 <h2 class="anchored" data-anchor-id="import-taxonomy">Import taxonomy</h2>
 <center>
 <img src="..\images/play_red.png" class="img-fluid" style="width:100px; background: white; border-radius:5px; border: white solid 5px">
 </center>
-<p>We can use the <code>Kraken2</code> report files to create our Krona plots. With the below command we can import our <code>Kraken2</code> taxonomy (within the report file) into a <code>Krona</code> html.</p>
+<p>Time to make our <code>krona</code> charts. With the below command we can import our <code>krona</code> text files into one <code>Krona</code> html.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ktImportTaxonomy</span> <span class="at">-o</span> kraken2.krona.html <span class="pp">*</span>.kreport2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ktImportText</span> <span class="at">-o</span> kraken2.krona.html <span class="pp">*</span>.krona</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li><code>-o</code> is our output html file</li>
-<li>The final argument <code>*.kreport2</code> represents all of our <code>.kreport2</code> files in the current directory
+<li>The final argument <code>*.krona</code> represents all of our <code>.krona</code> files in the current directory
 <ul>
-<li>The <code>*</code> is a wild-card, meaning any characters any number of times. Therefore <code>*.kreport2</code> identifies the files <code>K1.kreport2</code> <code>K2.kreport2</code> and <code>W1.kreport2</code></li>
+<li>The <code>*</code> is a wild-card, meaning any characters any number of times. Therefore <code>*.krona</code> identifies the files <code>K1.krona</code> <code>K2.krona</code> and <code>W1.krona</code></li>
 </ul></li>
 </ul>
-<p>You will get a warning that not all taxonomy IDs were found. We will ignore this but in your own future installations this should be addressed with <code>Krona</code>’s <code>updateTaxonomy.sh</code> command.</p>
 </section>
 <section id="tiered-piecharts" class="level2">
 <h2 class="anchored" data-anchor-id="tiered-piecharts">Tiered piecharts</h2>
@@ -515,23 +555,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </center>
 <p>We can view our interactive chart in a web browser. This shows the percentage of reads that were classified to various taxonomies at different levels.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firefox</span> kraken2.krona.html <span class="kw">&amp;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">firefox</span> kraken2.krona.html <span class="kw">&amp;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>This is an interactive multi-tiered pie chart with many options. Some of the interactivity is described below:</p>
 <ul>
 <li>To choose a sample to view, click on the sample name in the top left</li>
 <li>To zoom into a lower taxonomy, double click on the taxonomy’s name on the pie chart
 <ul>
-<li>E.g. double click the word “Bacteria” on the pie chart to zoom into Bacteria and therefore ignore Eukaryota, and “[other Root]”</li>
+<li>E.g. double click the word “Bacteria” on the pie chart to zoom into Bacteria and therefore ignore the Unclassified, Viral, and Archaeal</li>
 </ul></li>
 <li>To zoom out to a higher taxonomy, click on the taxonomy’s name in the middle of the pie chart
 <ul>
-<li>E.g. click the word “root” in the middle of the pie chart to zoom back out from any lower level of taxonomy</li>
+<li>E.g. click the word “all” in the middle of the pie chart to zoom back out from any lower level of taxonomy</li>
 </ul></li>
 <li>To view percentage stats of a taxonomy, click on the taxonomy name on the pie chart.
 <ul>
 <li>This will display the percentage this taxonomy covers of all the different taxonomies above it that it belongs to. This is displayed on the right side of the screen</li>
-<li>E.g. Click on Pseudomonadota to see the percentage of the Root it accounts for and to see the percentage of Bacteria it accounts for in the sample</li>
+<li>E.g. Click on Pseudomonadota to see the percentage of all the taxa it accounts for and to see the percentage of Bacteria it accounts for in the sample</li>
+</ul></li>
+<li>With our method of kraken2 to krona the top right of the screen shows the following 2 metrics for the slected taxa:
+<ul>
+<li><strong>Total:</strong> This is the “Number of paired reads covered by the clade rooted at this taxon” (i.e.&nbsp;column 2 of the kreport file)</li>
+<li><strong>Unassigned:</strong> This appears to be the “Number of paired reads assigned directly to this taxon”. However, the number for “k_Bacteria” does not seem to match anything in the <code>.kreport2</code> files</li>
 </ul></li>
 </ul>
 </section>
@@ -542,39 +587,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </center>
 <p>Viewing the Krona, attempt the below MCQs.</p>
 <ol type="1">
-<li>What percentage of the <strong>root</strong> was classified to <strong>Bacteria</strong> for <strong>K1</strong>?
-<div id="radio_XAQAZOWBWG" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_XAQAZOWBWG" value=""> <span><strong>2%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XAQAZOWBWG" value=""> <span><strong>34%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XAQAZOWBWG" value="answer"> <span><strong>35%</strong></span></label>
+<li>What percentage of <strong>all</strong> was classified to <strong>Bacteria</strong> for <strong>K1</strong>?
+<div id="radio_SGZMRIWOMT" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_SGZMRIWOMT" value=""> <span><strong>34%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_SGZMRIWOMT" value="answer"> <span><strong>44%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_SGZMRIWOMT" value=""> <span><strong>67%</strong></span></label>
 </div></li>
 </ol>
 <ol start="2" type="1">
-<li>What percentage of <strong>bacteria</strong> was classified to <strong>Pseudomonadota</strong> for <strong>K2</strong>?
-<div id="radio_USEAIAMSFW" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_USEAIAMSFW" value=""> <span><strong>2%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_USEAIAMSFW" value="answer"> <span><strong>34%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_USEAIAMSFW" value=""> <span><strong>35%</strong></span></label>
+<li>What percentage of <strong>Bacteria</strong> was classified to <strong>Firmicutes</strong> (also known as Bacillota) for <strong>K2</strong>?
+<div id="radio_QSZAIALXUW" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QSZAIALXUW" value="answer"> <span><strong>14%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QSZAIALXUW" value=""> <span><strong>44%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QSZAIALXUW" value=""> <span><strong>67%</strong></span></label>
 </div></li>
 </ol>
 <ol start="3" type="1">
-<li>What percentage of the <strong>root</strong> was classified to <strong>Myxococcota</strong> for <strong>W1</strong>?
-<div id="radio_YGZNDCQGZL" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_YGZNDCQGZL" value="answer"> <span><strong>2%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YGZNDCQGZL" value=""> <span><strong>34%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_YGZNDCQGZL" value=""> <span><strong>35%</strong></span></label>
+<li>What percentage of the <strong>Bacteroidetes</strong> was classified to <strong>Bacteroides</strong> for <strong>W1</strong>?
+<div id="radio_FPDXBRHAKD" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_FPDXBRHAKD" value=""> <span><strong>14%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FPDXBRHAKD" value=""> <span><strong>44%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_FPDXBRHAKD" value="answer"> <span><strong>67%</strong></span></label>
 </div></li>
 </ol>
 <ol start="4" type="1">
-<li>What percentage of the <strong>Terrabacteria groups</strong> was classified to <strong>Cellulomonas gilvus</strong> for <strong>K2</strong>?
-<div id="radio_TSRGVZRDXR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TSRGVZRDXR" value="answer"> <span><strong>39%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TSRGVZRDXR" value=""> <span><strong>8%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TSRGVZRDXR" value=""> <span><strong>6%</strong></span></label>
+<li>What is the number of paired reads covered by the clade rooted at <em>Anaerostipes hadrus</em> (i.e.&nbsp;Total) for K2?
+<div id="radio_AGFKYXUAZC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_AGFKYXUAZC" value=""> <span><strong>15</strong></span></label><label><input type="radio" autocomplete="off" name="radio_AGFKYXUAZC" value="answer"> <span><strong>17,244</strong></span></label><label><input type="radio" autocomplete="off" name="radio_AGFKYXUAZC" value=""> <span><strong>105,847</strong></span></label>
 </div></li>
 </ol>
 <ol start="5" type="1">
-<li>What percentage of <strong>Alphaproteobacteria</strong> was classified to <strong>Phenylobacterium immobile</strong> for <strong>K1</strong>?
-<div id="radio_TXMKXVBDRE" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_TXMKXVBDRE" value=""> <span><strong>39%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TXMKXVBDRE" value=""> <span><strong>8%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_TXMKXVBDRE" value="answer"> <span><strong>6%</strong></span></label>
+<li>What is the number of paired reads covered by the clade rooted at <em>Bacteroides ovatus</em> (i.e.&nbsp;Total) for <strong>K1</strong>?
+<div id="radio_MCKNOEWCFC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_MCKNOEWCFC" value=""> <span><strong>15</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MCKNOEWCFC" value=""> <span><strong>17,244</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MCKNOEWCFC" value="answer"> <span><strong>105,847</strong></span></label>
 </div></li>
 </ol>
 <ol start="6" type="1">
-<li>What percentage of <strong>Viridiplantae</strong> (in Eukaryota) was classified to <strong>Parasponia</strong> for <strong>W1</strong>?
-<div id="radio_DBYXCCANGI" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_DBYXCCANGI" value=""> <span><strong>39%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_DBYXCCANGI" value="answer"> <span><strong>8%</strong></span></label><label><input type="radio" autocomplete="off" name="radio_DBYXCCANGI" value=""> <span><strong>6%</strong></span></label>
+<li>What is the number of paired reads assigned directly to <strong>Clostridia</strong> (i.e.&nbsp;Unassigned) for <strong>W1</strong>?
+<div id="radio_JEIPGCVVTS" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_JEIPGCVVTS" value="answer"> <span><strong>15</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JEIPGCVVTS" value=""> <span><strong>17,244</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JEIPGCVVTS" value=""> <span><strong>105,847</strong></span></label>
 </div></li>
 </ol>
 

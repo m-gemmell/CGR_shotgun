@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.23">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>kraken2 – CGR Shotgun Metagenomics</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -70,19 +73,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="..//images/CGR_favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6f6599830d51be977da3b6af758f8eff.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-915e4266ce0e4a31097f949b2f157a4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-0a9e1fffec30c83bdb34004a38d2ef46.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-915e4266ce0e4a31097f949b2f157a4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6b948d182f74bb96291c9b96b765a13f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-91b4c70ba7c68ee040599dca7a410b8a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6b948d182f74bb96291c9b96b765a13f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -300,8 +302,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">CGR Shotgun Metagenomics</span>
     </a>
@@ -313,7 +313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Intro</span></a>
   </li>  
   <li class="nav-item">
@@ -329,7 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">QC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../read_approach/read_approach.html"> 
+    <a class="nav-link active" href="../read_approach/read_approach.html" aria-current="page"> 
 <span class="menu-text">Reads</span></a>
   </li>  
   <li class="nav-item">
@@ -374,10 +374,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -650,44 +646,44 @@ K2 &amp; W1 Kraken 2 commands
 <p>Viewing the Kraken2 output files with your favourite text viewer (<code>less</code>, <code>nano</code>, <code>vim</code>, etc.), attempt the below MCQs.</p>
 <ol type="1">
 <li>How many paired reads were unclassified for K1?
-<div id="radio_JJCGKGYMPR" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_JJCGKGYMPR" value=""> <span><strong>2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JJCGKGYMPR" value=""> <span><strong>486,723</strong></span></label><label><input type="radio" autocomplete="off" name="radio_JJCGKGYMPR" value="answer"> <span><strong>555,162</strong></span></label>
+<div id="radio_XZIQCJAMXZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_XZIQCJAMXZ" value=""> <span><strong>2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XZIQCJAMXZ" value=""> <span><strong>486,723</strong></span></label><label><input type="radio" autocomplete="off" name="radio_XZIQCJAMXZ" value="answer"> <span><strong>555,162</strong></span></label>
 </div></li>
 </ol>
 <ol start="2" type="1">
 <li>How many paired reads were classified for K2 (i.e.&nbsp;number of reads classified at root level and below)?
-<div id="radio_WAHVFAFTBJ" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_WAHVFAFTBJ" value=""> <span><strong>2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WAHVFAFTBJ" value="answer"> <span><strong>486,723</strong></span></label><label><input type="radio" autocomplete="off" name="radio_WAHVFAFTBJ" value=""> <span><strong>555,162</strong></span></label>
+<div id="radio_OUIILZZTPC" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_OUIILZZTPC" value=""> <span><strong>2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OUIILZZTPC" value="answer"> <span><strong>486,723</strong></span></label><label><input type="radio" autocomplete="off" name="radio_OUIILZZTPC" value=""> <span><strong>555,162</strong></span></label>
 </div></li>
 </ol>
 <ol start="3" type="1">
 <li>How many paired reads were assigned directly to root level for W1?
-<div id="radio_MOOKIAVRVF" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_MOOKIAVRVF" value="answer"> <span><strong>2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MOOKIAVRVF" value=""> <span><strong>486,723</strong></span></label><label><input type="radio" autocomplete="off" name="radio_MOOKIAVRVF" value=""> <span><strong>555,162</strong></span></label>
+<div id="radio_GKSZVSVYGZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_GKSZVSVYGZ" value="answer"> <span><strong>2</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GKSZVSVYGZ" value=""> <span><strong>486,723</strong></span></label><label><input type="radio" autocomplete="off" name="radio_GKSZVSVYGZ" value=""> <span><strong>555,162</strong></span></label>
 </div></li>
 </ol>
 <ol start="4" type="1">
 <li>What percentage of W1’s paired reads were assigned to the clade of Bacteroidetes (Phylum)?
-<div id="radio_NLFAPJHGGH" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_NLFAPJHGGH" value=""> <span><strong>0.12</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NLFAPJHGGH" value=""> <span><strong>0.59</strong></span></label><label><input type="radio" autocomplete="off" name="radio_NLFAPJHGGH" value="answer"> <span><strong>14.89</strong></span></label>
+<div id="radio_PQURLWNHOM" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_PQURLWNHOM" value=""> <span><strong>0.12</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PQURLWNHOM" value=""> <span><strong>0.59</strong></span></label><label><input type="radio" autocomplete="off" name="radio_PQURLWNHOM" value="answer"> <span><strong>14.89</strong></span></label>
 </div></li>
 </ol>
 <ol start="5" type="1">
 <li>What percentage of K2’s paired reads were assigned to the clade of Rikenellaceae (Family)?
-<div id="radio_UHOTCWGCIC" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UHOTCWGCIC" value=""> <span><strong>0.12</strong></span></label><label><input type="radio" autocomplete="off" name="radio_UHOTCWGCIC" value="answer"> <span><strong>0.59</strong></span></label><label><input type="radio" autocomplete="off" name="radio_UHOTCWGCIC" value=""> <span><strong>14.89</strong></span></label>
+<div id="radio_QAPQZUBMAZ" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_QAPQZUBMAZ" value=""> <span><strong>0.12</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QAPQZUBMAZ" value="answer"> <span><strong>0.59</strong></span></label><label><input type="radio" autocomplete="off" name="radio_QAPQZUBMAZ" value=""> <span><strong>14.89</strong></span></label>
 </div></li>
 </ol>
 <ol start="6" type="1">
 <li>What percentage of K1’s paired reads were assigned to the clade of Bacteroides helcogenes (Species)?
-<div id="radio_UKIGUNTRSD" class="webex-radiogroup">
-<label><input type="radio" autocomplete="off" name="radio_UKIGUNTRSD" value="answer"> <span><strong>0.12</strong></span></label><label><input type="radio" autocomplete="off" name="radio_UKIGUNTRSD" value=""> <span><strong>0.59</strong></span></label><label><input type="radio" autocomplete="off" name="radio_UKIGUNTRSD" value=""> <span><strong>14.89</strong></span></label>
+<div id="radio_HDBOCZMUOH" class="webex-radiogroup">
+<label><input type="radio" autocomplete="off" name="radio_HDBOCZMUOH" value="answer"> <span><strong>0.12</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HDBOCZMUOH" value=""> <span><strong>0.59</strong></span></label><label><input type="radio" autocomplete="off" name="radio_HDBOCZMUOH" value=""> <span><strong>14.89</strong></span></label>
 </div></li>
 </ol>
 <div class="cell">
 <div class="cell-output-display">
-<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-a5bddf5a07c91c584948" width="100%"></span>
-<script type="application/json" data-for="htmlwidget-a5bddf5a07c91c584948">{"x":{"element":"kmer","opts":{"content":"Substrings of length k within a DNA/RNA sequence. \n                              The 1-mers of 'AGCT' are 'A', 'G', 'C', and 'T'. \n                              Its 2-mers are 'AG', 'GC' and 'CT'. \n                              Its 3-mers are 'AGC' and GCT'. \n                              Its 4-mer is 'AGCT'.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
+<span class="tippy html-widget html-fill-item" height="382px" id="htmlwidget-b442c1680cd0c528a1d5" width="100%"></span>
+<script type="application/json" data-for="htmlwidget-b442c1680cd0c528a1d5">{"x":{"element":"kmer","opts":{"content":"Substrings of length k within a DNA/RNA sequence. \n                              The 1-mers of 'AGCT' are 'A', 'G', 'C', and 'T'. \n                              Its 2-mers are 'AG', 'GC' and 'CT'. \n                              Its 3-mers are 'AGC' and GCT'. \n                              Its 4-mer is 'AGCT'.","arrow":true,"placement":"bottom"}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 
